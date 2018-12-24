@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>scene1</title>
+	<style>
+	body{
+	background:#000; height: 3800px;}
+
+  #rain{
+		position: absolute; width: 755px; height: 258px; top: 600px; transition:all 1s; }
+
+
+  #gyrhkdma{position: absolute; width: 295px;height: 331px; top: 650px;left: 450px; transition:all 1s; }
+
+	#box2{position:absolute; width: 755px;height: 258px; top: 1300px; left: 1200px;  transition:all 1s;}
+
+	#rip{position:absolute; width: 755px;height: 258px; top: 1300px; left:1200px;  transition:all 1s; }
+
+	#jin{position:absolute; width: 800px; height: 800px; top: 2000px;  left:550px;
+	 transition:all 1s;}
+
+	#jin2{position: absolute; width: 755px; height: 258px; top: 3300px; left:550px;  cursor: pointer;}
+
+
+
+		
+
+	</style>
+	
+
+</head>
+<body>
+    <img id="rain" src="./image/22222222.png"></div>
+	<img id="gyrhkdma" src="./image/333333.png"></div>
+	<img id="box2" src="./image/1111111.png"></div>
+	<img id="rip" src="./image/묘비.png"></div>
+	<img id="jin" src="./image/비맞는진.png"></div>
+	<a href="index2.html"><img id="jin2" src="./image/진3.png"></a></div>
+
+
+</div>
+
+<script type="text/javascript">
+	
+
+	window.onscroll = function(){
+		var t = document.documentElement.scrollTop + document.body.scrollTop;
+
+		if(t < 100){
+			rain.style.display = "none";
+			gyrhkdma.style.display = "none";
+			box2.style.display = "none";
+			rip.style.display = "none";
+			jin.style.display = "none";
+			jin2.style.display = "none";
+		}else if(t < 300){
+			box2.style.display = "none";
+			rip.style.display = "none";
+			jin.style.display = "none";
+			rain.style.display = "block";
+		}else if(t < 400){
+			box2.style.display = "none";
+			rip.style.display = "none";
+			jin.style.display = "none";
+			gyrhkdma.style.display = "block";
+			rain.style.display = "block";
+        }else if(t < 800){
+			rip.style.display = "none";
+			jin.style.display = "none";
+			box2.style.display = "block";
+		}else if(t < 850){
+			jin.style.display = "none";
+			jin2.style.display = "none";
+			rip.style.display = "block";
+		}else if(t < 1500){
+			jin.style.display = "none";
+			jin2.style.display = "none";
+			rip.style.display = "block";
+		}else if(t < 1800){
+	        jin2.style.display = "none";
+			jin.style.display = "block";
+		}else if(t < 2000){
+	        jin2.style.display = "none";
+			jin.style.display = "block";
+		}else if(t < 2500){
+			jin2.style.display = "block";
+		}
+	}
+	
+
+
+
+
+
+</script>
+
+</body>
+</html>

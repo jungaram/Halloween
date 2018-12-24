@@ -1,0 +1,2295 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>scene2</title>
+	<style>
+		body{background:#000;}
+
+    /*장례식*/
+
+	#back{width: 3500px; height: 677px; background:url('./image/bg-1.jpg'); background-size: no-repeat;  position: absolute; bottom: 150px; z-index:-3;}
+	#back2{width: 3500px; height: 677px; background:url('./image/bg-2.png'); background-size: no-repeat; position: absolute; bottom: 150px; z-index:1;}
+	#back3{width: 3500px; height: 1100px; left: 3500px; background: #000; z-index: -1; bottom: 0; position: absolute; background-size: no-repeat;}
+		
+    /*앞걷는 캐릭터*/
+
+     #JIN {width:162px; height:300px; position:fixed; left:24%; bottom: 180px; z-index:-1;}
+
+     #JIN1 {width:0px; height:300px; position:fixed; left:24%; bottom: 180px; z-index:-1;}
+     #JIN2 {width:0px; height:300px; position:fixed; left:24%; bottom: 180px; ;z-index:-1;}
+     #JIN3 {width:0px; height:300px; position:fixed; left:24%; bottom:180px;z-index:-1;}
+     #JIN4 {width:0px; height:300px; position:fixed; left:24%; bottom: 180px; z-index:-1;}
+     #JIN5 {width:0px; height:300px; position:fixed; left:24%; bottom:180px; z-index:-1;}
+     #JIN6 {width:0px; height:300px; position:fixed; left:24%; bottom:180px; z-index:-1;}
+
+     /*뒤걷는 캐릭터*/
+
+     #BJIN {width:0px; height:300px; position:fixed; left:24%; bottom: 180px; z-index:-1;}
+
+     #BJIN1 {width:0px; height:300px; position:fixed; left:24%; bottom: 180px; z-index:-1;}
+     #BJIN2 {width:0px; height:300px; position:fixed; left:24%; bottom: 180px; z-index:-1;}
+     #BJIN3 {width:0px; height:300px; position:fixed; left:24%; bottom: 180px; z-index:-1;}
+     #BJIN4 {width:0px; height:300px; position:fixed; left:24%; bottom: 180px; z-index:-1;}
+     #BJIN5 {width:0px; height:300px; position:fixed; left:24%; bottom: 180px; z-index:-1;}
+     #BJIN6 {width:0px; height:300px; position:fixed; left:24%; bottom: 180px; z-index:-1;}
+
+     /*초반독백*/
+
+     #akfvndtjs{ width:350px; height:210px; position:absolute; left:500px; top:150px;  z-index:1; transition:all 1s;}
+     #akfvndtjs1{ width:350px; height:210px; position:absolute; left:1000px; top:600px;  z-index:1; transition:all 1s;}
+     #akfvndtjs2{ width:350px; height:210px; position:absolute; left:1500px; top:150px;  z-index:1; transition:all 1s;}
+     #akfvndtjs3{ width:350px; height:210px; position:absolute; left:2000px; top:600px;  z-index:1; transition:all 1s;}
+
+
+     #monitor{width:0px; height:0px; background:none; position:fixed; right:0;
+      color:white; text-align:center; line-height:40px; z-index:5;}
+
+     #HOUSE{width: 800px; height:800px; position: absolute; bottom: 100px;  left: 2800px; z-index: -1; }
+
+/*대사*/
+
+     #eotk{ width:350px; height:210px; position:absolute; left:4000px; top:150px;  z-index:-1; transition:all 1s;}
+     #eotk1{ width:350px; height:210px; position:absolute; left:4600px; top:600px;  z-index:-1; transition:all 1s;}
+     #eotk2{ width:350px; height:210px; position:absolute; left:9000px; top:380px;  z-index:-1; transition:all 1s;}
+     #eotk3{ width:259px; height:155px; position:absolute; left:5600px; top:130px;  z-index:3; transition:all 1s;}
+     #eotk4{ width:259px; height:155px; position:absolute; left:6000px; top:650px;  z-index:3; transition:all 1s;}
+     #eotk5{ width:259px; height:155px; position:absolute; left:6300px; top:380px;  z-index:4; transition:all 1s;}
+     #eotk6{ width:259px; height:155px; position:absolute; left:7500px; top:380px;  z-index:2; transition:all 1s;}
+
+     #blackbox{ width: 2300px; height: 900px; position: absolute; left:5000px; top: 0px; z-index: 1; transform: 1s; background: #000; }
+
+     #blackbox2{ width: 19500px; height: 900px; position: absolute; left:9500px; top: 0px; z-index: 1; transform: 1s; background: #000; }
+
+     /*달력컷*/
+
+     #aksghk1{ width: 862px; height: 294px; position: absolute; left:5500px; top: 50px; z-index:2; transform: 1s; }
+     #aksghk2{ width: 862px; height: 294px; position: absolute; left:5500px; top: 600px;z-index:2; transform: 1s; }
+     #aksghk3{ width: 862px; height: 294px; position: absolute; left:5800px; top: 320px;z-index:3; transform: 1s; }
+
+    /*만화컷1*/
+    
+    #manhwa1{ width: 862px; height: 294px; position: absolute; left:10000px; top: 350px; z-index:2; transform: 1s; }
+    #manhwa2{ width: 862px; height: 294px; position: absolute; left:11700px; top: 150px; z-index:2; transform: 1s; }
+    #manhwa3{ width: 862px; height: 294px; position: absolute; left:11900px; top: 550px; z-index:2; transform: 1s; }
+    #manhwa4{ width: 862px; height: 294px; position: absolute; left:13400px; top: 150px; z-index:2; transform: 1s; }
+    #manhwa5{ width: 862px; height: 294px; position: absolute; left:13400px; top: 550px; z-index:2; transform: 1s; }
+
+    /*만화컷1 말풍선*/
+
+    #malpungsun1{ width: 400px; height: 240px; position: absolute; left:11700px; top: 150px; z-index:2; transform: 1s; }
+    #malpungsun2{ width: 400px; height: 240px; position: absolute; left:12200px; top: 380px; z-index:2; transform: 1s; }
+    #malpungsun3{ width: 400px; height: 240px; position: absolute; left:11900px; top: 600px; z-index:2; transform: 1s; }
+    #malpungsun4{ width: 400px; height: 240px; position: absolute; left:13400px; top: 150px; z-index:2; transform: 1s; }
+    #malpungsun5{ width: 400px; height: 240px; position: absolute; left:13900px; top: 600px; z-index:2; transform: 1s; }
+
+    /*만화컷2*/
+
+    #manhwa21{ width: 862px; height: 294px; position: absolute; left:15000px; top: 150px; z-index:2; transform: 1s; }
+    #manhwa22{ width: 862px; height: 294px; position: absolute; left:15500px; top: 550px; z-index:2; transform: 1s; }
+    #manhwa23{ width: 862px; height: 294px; position: absolute; left:17000px; top: 350px; z-index:2; transform: 1s; }
+    #manhwa24{ width: 756px; height: 756px; position: absolute; left:18500px; top: 50px; z-index:2; transform: 1s; }
+    #manhwa25{ width: 756px; height: 756px; position: absolute; left:18600px; top: 150px; z-index:2; transform: 1s; }
+
+
+    /*만화컷2 말풍선*/
+     #malpungsun21{ width: 500px; height: 300px; position: absolute; left:15000px; top: 150px; z-index:2; transform: 1s; }
+     #malpungsun22{ width: 500px; height: 300px; position: absolute; left:15400px; top: 550px; z-index:2; transform: 1s; }
+     #malpungsun23{ width: 400px; height: 240px; position: absolute; left:17000px; top: 250px; z-index:2; transform: 1s; }
+     #malpungsun24{ width: 400px; height: 240px; position: absolute; left:17500px; top: 550px; z-index:2; transform: 1s; }
+     #malpungsun25{ width: 400px; height: 240px; position: absolute; left:20000px; top: 400px; z-index:2; transform: 1s; }
+     #malpungsun26{ width: 550px; height: 350px; position: absolute; left:18650px; top: 350px; z-index:3; transform: 1s; }
+
+     /*효과음*/
+
+     #gyrhkdma1{width: 273px; height: 232px; z-index: 2; position:absolute; left: 20200px; top:500px; transform: 1s;}
+     #gyrhkdma2{width: 236px; height: 265px; z-index: 3; position:absolute; left:23700px; top:450px; transform: 1s;}
+     #gyrhkdma3{width: 295px; height: 331px; z-index: 3; position:absolute; left:24200px; top:50px; transform: 1s;}
+     #gyrhkdma4{width: 236px; height: 265px; z-index: 3; position:absolute; left:27700px; top:400px; transform: 1s; cursor: pointer;}
+
+
+
+     /*만화컷3*/
+     #manhwa31{ width: 862px; height: 294px; position: absolute; left:21000px; top: 400px; z-index:2; transform: 1s; }
+     #manhwa32{ width: 862px; height: 294px; position: absolute; left:22300px; top: 400px; z-index:2; transform: 1s; }
+     #manhwa33{ width: 862px; height: 294px; position: absolute; left:23700px; top: 150px; z-index:2; transform: 1s; }
+     #manhwa34{ width: 862px; height: 294px; position: absolute; left:23700px; top: 550px; z-index:2; transform: 1s; }
+     #manhwa35{ width: 756px; height: 756px; position: absolute; left:25900px; top: 50px; z-index:2; transform: 1s; }
+     #manhwa36{ width: 756px; height: 756px; position: absolute; left:25900px; top: 150px; z-index:2; transform: 1s; }
+
+     /*만화컷3 말풍선*/
+     #malpungsun31{ width: 500px; height: 300px; position: absolute; left:21185px; top: 400px; z-index:2; transform: 1s; }
+     #malpungsun32{ width: 500px; height: 300px; position: absolute; left:22485px; top: 400px; z-index:2; transform: 1s; }
+
+
+
+
+
+	</style>
+</head>
+<body>
+	<div id="back"></div>
+	<div id="back2"></div>
+	<div id="back3"></div>
+	<img id = "JIN" src="./image/걷기1.png">
+    <img id = "JIN1" src="./image/걷기2.png">
+    <img id = "JIN2" src="./image/걷기3.png">
+    <img id = "JIN3" src="./image/걷기4.png">
+    <img id = "JIN4" src="./image/걷기5.png">
+    <img id = "JIN5" src="./image/걷기6.png">
+    <img id = "JIN6" src="./image/걷기7.png">
+
+    <img id = "BJIN" src="./image/뒤걷기1.png"> 
+    <img id = "BJIN1" src="./image/뒤걷기2.png"> 
+    <img id = "BJIN2" src="./image/뒤걷기3.png"> 
+    <img id = "BJIN3" src="./image/뒤걷기4.png"> 
+    <img id = "BJIN4" src="./image/뒤걷기5.png"> 
+    <img id = "BJIN5" src="./image/뒤걷기6.png"> 
+    <img id = "BJIN6" src="./image/뒤걷기7.png"> 
+
+    <img id = "akfvndtjs" src="./image/말1.png"> 
+    <img id = "akfvndtjs1" src="./image/말2.png"> 
+    <img id = "akfvndtjs2" src="./image/말3.png"> 
+    <img id = "akfvndtjs3" src="./image/말4.png"> 
+
+    <div id= monitor></div>
+
+    <img id="HOUSE" src="./image/코믹2.png"></div>
+
+    <img id = "eotk" src="./image/대사2.png">
+    <img id = "eotk1" src="./image/대사1.png"> 
+    <img id = "eotk2" src="./image/대사3.png">
+    <img id = "eotk3" src="./image/대사4.png">
+    <img id = "eotk4" src="./image/대사5.png"> 
+    <img id = "eotk5" src="./image/대사6.png"> 
+    <img id = "eotk6" src="./image/대사7.png">
+
+    <img id = "aksghk1" src="./image/달력1.png">
+    <img id = "aksghk2" src="./image/달력2.png">
+    <img id = "aksghk3" src="./image/달력3.png">
+
+    <div id = "blackbox"></div>
+    <div id = "blackbox2"></div>
+
+    <img id = "manhwa1" src="./image/만화1-1.png">
+    <img id = "manhwa2" src="./image/만화1-2.png">
+    <img id = "manhwa3" src="./image/만화1-3.png">
+    <img id = "manhwa4" src="./image/만화1-4.png">
+    <img id = "manhwa5" src="./image/만화1-5.png">
+
+    <img id = "malpungsun1" src="./image/대사1-1.png">
+    <img id = "malpungsun2" src="./image/대사1-2.png">
+    <img id = "malpungsun3" src="./image/대사1-3.png">
+    <img id = "malpungsun4" src="./image/대사1-4.png">
+    <img id = "malpungsun5" src="./image/대사1-5.png">
+
+    <img id = "manhwa21" src="./image/만화2-1.png">
+    <img id = "manhwa22" src="./image/만화2-2.png">
+    <img id = "manhwa23" src="./image/만화2-3.png">
+    <img id = "manhwa24" src="./image/만화3-1.png">
+    <img id = "manhwa25" src="./image/만화3-2.png">
+
+    <img id = "malpungsun21" src="./image/대사1-6.png">
+    <img id = "malpungsun22" src="./image/대사1-7.png">
+    <img id = "malpungsun23" src="./image/대사1-8.png">
+    <img id = "malpungsun24" src="./image/대사1-9.png">
+    <img id = "malpungsun25" src="./image/대사2-1.png">
+    <img id = "malpungsun26" src="./image/대사1-7.png">
+
+    <img id = "gyrhkdma1" src="./image/효과음1.png">
+    <img id = "gyrhkdma2" src="./image/효과음.png">
+    <img id = "gyrhkdma3" src="./image/효과음.png">
+    <a href="index3.html"><img id = "gyrhkdma4" src="./image/효과음2.png"></a></div>
+
+    <img id = "malpungsun31" src="./image/대사2-2.png">
+    <img id = "malpungsun32" src="./image/대사2-3.png">
+
+    <img id = "manhwa31" src="./image/만화2-4.png">
+    <img id = "manhwa32" src="./image/만화2-5.png">
+    <img id = "manhwa33" src="./image/만화2-6.png">
+    <img id = "manhwa34" src="./image/만화2-7.png">
+    <img id = "manhwa35" src="./image/만화2-8.png">
+    <img id = "manhwa36" src="./image/만화2-9.png">
+
+  
+
+   
+
+    
+
+
+	
+
+
+
+	<script type="text/javascript">
+	
+
+    var a = 0;
+      window.onmousewheel = function(e){
+        var scroll = 15;
+        
+        a++;
+        if(e.deltaY>0){
+          if(a%7==1){
+            JIN.style.width = "162px";
+            JIN1.style.width = "0px";
+            JIN2.style.width = "0px";
+            JIN3.style.width = "0px";
+            JIN4.style.width = "0px";
+            JIN5.style.width = "0px";
+            JIN6.style.width = "0px";
+
+            BJIN.style.width = "0px";
+            BJIN1.style.width = "0px";
+            BJIN2.style.width = "0px";
+            BJIN3.style.width = "0px";
+            BJIN4.style.width = "0px";
+            BJIN5.style.width = "0px";
+            BJIN6.style.width = "0px";
+          }else if(a%7==2){
+            JIN.style.width = "0px";
+            JIN1.style.width = "162px";
+            JIN2.style.width = "0px";
+            JIN3.style.width = "0px";
+            JIN4.style.width = "0px";
+            JIN5.style.width = "0px";
+            JIN6.style.width = "0px";
+
+            BJIN.style.width = "0px";
+            BJIN1.style.width = "0px";
+            BJIN2.style.width = "0px";
+            BJIN3.style.width = "0px";
+            BJIN4.style.width = "0px";
+            BJIN5.style.width = "0px";
+            BJIN6.style.width = "0px";
+          }else if(a%7==3){
+          	JIN.style.width = "0px";
+            JIN1.style.width = "0px";
+            JIN2.style.width = "90px";
+            JIN3.style.width = "0px";
+            JIN4.style.width = "0px";
+            JIN5.style.width = "0px";
+            JIN6.style.width = "0px";
+
+            BJIN.style.width = "0px";
+            BJIN1.style.width = "0px";
+            BJIN2.style.width = "0px";
+            BJIN3.style.width = "0px";
+            BJIN4.style.width = "0px";
+            BJIN5.style.width = "0px";
+            BJIN6.style.width = "0px";
+           }else if(a%7==4){
+          	JIN.style.width = "0px";
+            JIN1.style.width = "0px";
+            JIN2.style.width = "0px";
+            JIN3.style.width = "162px";
+            JIN4.style.width = "0px";
+            JIN5.style.width = "0px";
+            JIN6.style.width = "0px";
+
+            BJIN.style.width = "0px";
+            BJIN1.style.width = "0px";
+            BJIN2.style.width = "0px";
+            BJIN3.style.width = "0px";
+            BJIN4.style.width = "0px";
+            BJIN5.style.width = "0px";
+            BJIN6.style.width = "0px";
+           }else if(a%7==5){
+          	JIN.style.width = "0px";
+            JIN1.style.width = "0px";
+            JIN2.style.width = "0px";
+            JIN3.style.width = "0px";
+            JIN4.style.width = "162px";
+            JIN5.style.width = "0px";
+            JIN6.style.width = "0px";
+
+            BJIN.style.width = "0px";
+            BJIN1.style.width = "0px";
+            BJIN2.style.width = "0px";
+            BJIN3.style.width = "0px";
+            BJIN4.style.width = "0px";
+            BJIN5.style.width = "0px";
+            BJIN6.style.width = "0px";
+           }else if(a%7==6){
+          	JIN.style.width = "0px";
+            JIN1.style.width = "0px";
+            JIN2.style.width = "0px";
+            JIN3.style.width = "0px";
+            JIN4.style.width = "0px";
+            JIN5.style.width = "102px";
+            JIN6.style.width = "0px";
+
+            BJIN.style.width = "0px";
+            BJIN1.style.width = "0px";
+            BJIN2.style.width = "0px";
+            BJIN3.style.width = "0px";
+            BJIN4.style.width = "0px";
+            BJIN5.style.width = "0px";
+            BJIN6.style.width = "0px";
+           }else if(a%7==0){
+          	JIN.style.width = "0px";
+            JIN1.style.width = "0px";
+            JIN2.style.width = "0px";
+            JIN3.style.width = "0px";
+            JIN4.style.width = "0px";
+            JIN5.style.width = "0px";
+            JIN6.style.width = "120px";
+
+            BJIN.style.width = "0px";
+            BJIN1.style.width = "0px";
+            BJIN2.style.width = "0px";
+            BJIN3.style.width = "0px";
+            BJIN4.style.width = "0px";
+            BJIN5.style.width = "0px";
+            BJIN6.style.width = "0px";
+           }
+            window.scrollBy(scroll,0);
+        }else if(e.deltaY<0){
+          scroll = -scroll;
+          window.scrollBy(scroll,0);
+          if(a%7==1){
+            JIN.style.width = "0px";
+            JIN1.style.width = "0px";
+            JIN2.style.width = "0px";
+            JIN3.style.width = "0px";
+            JIN4.style.width = "0px";
+            JIN5.style.width = "0px";
+            JIN6.style.width = "0px";
+
+            BJIN.style.width = "162px";
+            BJIN1.style.width = "0px";
+            BJIN2.style.width = "0px";
+            BJIN3.style.width = "0px";
+            BJIN4.style.width = "0px";
+            BJIN5.style.width = "0px";
+            BJIN6.style.width = "0px";
+          }else if(a%7==2){
+            JIN.style.width = "0px";
+            JIN1.style.width = "0px";
+            JIN2.style.width = "0px";
+            JIN3.style.width = "0px";
+            JIN4.style.width = "0px";
+            JIN5.style.width = "0px";
+            JIN6.style.width = "0px";
+
+            BJIN.style.width = "0px";
+            BJIN1.style.width = "162px";
+            BJIN2.style.width = "0px";
+            BJIN3.style.width = "0px";
+            BJIN4.style.width = "0px";
+            BJIN5.style.width = "0px";
+            BJIN6.style.width = "0px";
+          }else if(a%7==3){
+          	JIN.style.width = "0px";
+            JIN1.style.width = "0px";
+            JIN2.style.width = "0px";
+            JIN3.style.width = "0px";
+            JIN4.style.width = "0px";
+            JIN5.style.width = "0px";
+            JIN6.style.width = "0px";
+
+            BJIN.style.width = "0px";
+            BJIN1.style.width = "0px";
+            BJIN2.style.width = "90px";
+            BJIN3.style.width = "0px";
+            BJIN4.style.width = "0px";
+            BJIN5.style.width = "0px";
+            BJIN6.style.width = "0px";
+           }else if(a%7==4){
+          	JIN.style.width = "0px";
+            JIN1.style.width = "0px";
+            JIN2.style.width = "0px";
+            JIN3.style.width = "0px";
+            JIN4.style.width = "0px";
+            JIN5.style.width = "0px";
+            JIN6.style.width = "0px";
+
+            BJIN.style.width = "0px";
+            BJIN1.style.width = "0px";
+            BJIN2.style.width = "0px";
+            BJIN3.style.width = "162px";
+            BJIN4.style.width = "0px";
+            BJIN5.style.width = "0px";
+            BJIN6.style.width = "0px";
+           }else if(a%7==5){
+          	JIN.style.width = "0px";
+            JIN1.style.width = "0px";
+            JIN2.style.width = "0px";
+            JIN3.style.width = "0px";
+            JIN4.style.width = "0px";
+            JIN5.style.width = "0px";
+            JIN6.style.width = "0px";
+
+            BJIN.style.width = "0px";
+            BJIN1.style.width = "0px";
+            BJIN2.style.width = "0px";
+            BJIN3.style.width = "0px";
+            BJIN4.style.width = "162px";
+            BJIN5.style.width = "0px";
+            BJIN6.style.width = "0px";
+           }else if(a%7==6){
+          	JIN.style.width = "0px";
+            JIN1.style.width = "0px";
+            JIN2.style.width = "0px";
+            JIN3.style.width = "0px";
+            JIN4.style.width = "0px";
+            JIN5.style.width = "0px";
+            JIN6.style.width = "0px";
+
+            BJIN.style.width = "0px";
+            BJIN1.style.width = "0px";
+            BJIN2.style.width = "0px";
+            BJIN3.style.width = "0px";
+            BJIN4.style.width = "0px";
+            BJIN5.style.width = "102px";
+            BJIN6.style.width = "0px";
+           }else if(a%7==0){
+          	JIN.style.width = "0px";
+            JIN1.style.width = "0px";
+            JIN2.style.width = "0px";
+            JIN3.style.width = "0px";
+            JIN4.style.width = "0px";
+            JIN5.style.width = "0px";
+            JIN6.style.width = "0px";
+
+            BJIN.style.width = "0px";
+            BJIN1.style.width = "0px";
+            BJIN2.style.width = "0px";
+            BJIN3.style.width = "0px";
+            BJIN4.style.width = "0px";
+            BJIN5.style.width = "0px";
+            BJIN6.style.width = "120px";
+          }
+        }
+      }
+
+    window.onscroll = function(e){
+     
+ 
+    	var t= document.documentElement.scrollLeft;
+    monitor.innerHTML = t +"px";
+
+
+    if(t <0){
+
+    	akfvndtjs.style.opacity = "0";
+    	akfvndtjs1.style.opacity = "0";
+    	akfvndtjs2.style.opacity = "0";
+    	akfvndtjs3.style.opacity = "0";
+    } else if (t<100) {
+
+    	akfvndtjs.style.opacity = "0";
+    	akfvndtjs1.style.opacity = "0";
+    	akfvndtjs2.style.opacity = "0";
+    	akfvndtjs3.style.opacity = "0";
+
+    } else if (t<200) {
+    	akfvndtjs.style.opacity = "1";
+        akfvndtjs1.style.opacity = "0";
+    	akfvndtjs2.style.opacity = "0";
+    	akfvndtjs3.style.opacity = "0";
+
+    } else if (t<600) {
+    	akfvndtjs.style.opacity = "0";
+    	akfvndtjs1.style.opacity = "1";
+    	akfvndtjs2.style.opacity = "0";
+    	akfvndtjs3.style.opacity = "0";
+    } else if (t<1000) {
+    	akfvndtjs.style.opacity = "0";
+    	akfvndtjs1.style.opacity = "0";
+    	akfvndtjs2.style.opacity = "1";
+    	akfvndtjs3.style.opacity = "0";
+    } else if (t<1600) {
+    	akfvndtjs.style.opacity = "0";
+    	akfvndtjs1.style.opacity = "0";
+    	akfvndtjs2.style.opacity = "0";
+    	akfvndtjs3.style.opacity = "1";
+
+   } else if (t<1900) {
+   	    akfvndtjs.style.opacity = "0";
+    	akfvndtjs1.style.opacity = "0";
+    	akfvndtjs2.style.opacity = "0";
+    	akfvndtjs3.style.opacity = "0";
+    	eotk.style.opacity = "0";
+    	eotk1.style.opacity = "0";
+    	eotk2.style.opacity = "0";
+    } else if (t<3000) {
+    	akfvndtjs.style.opacity = "0";
+    	akfvndtjs1.style.opacity = "0";
+    	akfvndtjs2.style.opacity = "0";
+    	akfvndtjs3.style.opacity = "0";
+   	    eotk.style.opacity = "0";
+    	eotk1.style.opacity = "0";
+    	eotk2.style.opacity = "0";
+    } else if (t<3500) {
+    	akfvndtjs.style.opacity = "0";
+    	akfvndtjs1.style.opacity = "0";
+    	akfvndtjs2.style.opacity = "0";
+    	akfvndtjs3.style.opacity = "0";
+   	    eotk.style.opacity = "1";
+    	eotk1.style.opacity = "0";
+    	eotk2.style.opacity = "0";
+    	blackbox.style.opacity = "0";
+
+    } else if (t<4000) {
+    	akfvndtjs.style.opacity = "0";
+    	akfvndtjs1.style.opacity = "0";
+    	akfvndtjs2.style.opacity = "0";
+    	akfvndtjs3.style.opacity = "0";
+   	    eotk.style.opacity = "1";
+    	eotk1.style.opacity = "1";
+    	eotk2.style.opacity = "0";
+    	eotk3.style.opacity = "0";
+    	eotk4.style.opacity = "0";
+    	eotk5.style.opacity = "0";
+    	eotk6.style.opacity = "0";
+    	aksghk1.style.opacity = "0";
+    	aksghk2.style.opacity = "0";
+    	aksghk3.style.opacity = "0";
+    	blackbox.style.opacity = "0.1";
+
+   } else if (t<4600) {
+    	akfvndtjs.style.opacity = "0";
+    	akfvndtjs1.style.opacity = "0";
+    	akfvndtjs2.style.opacity = "0";
+    	akfvndtjs3.style.opacity = "0";
+    	blackbox.style.opacity = "0.3";
+   	    eotk.style.opacity = "1";
+    	eotk1.style.opacity = "1";
+    	eotk2.style.opacity = "0";
+    	eotk3.style.opacity = "1";
+    	eotk4.style.opacity = "0";
+    	eotk5.style.opacity = "0";
+    	eotk6.style.opacity = "0";
+    	aksghk1.style.opacity = "1";
+    	aksghk2.style.opacity = "0";
+    	aksghk3.style.opacity = "0";
+    	blackbox.style.opacity = "0.5";
+   } else if (t<5100) {
+    	akfvndtjs.style.opacity = "0";
+    	akfvndtjs1.style.opacity = "0";
+    	akfvndtjs2.style.opacity = "0";
+    	akfvndtjs3.style.opacity = "0";
+    	blackbox.style.opacity = "0.8";
+   	    eotk.style.opacity = "1";
+    	eotk1.style.opacity = "1";
+    	eotk2.style.opacity = "0";
+    	eotk3.style.opacity = "1";
+    	eotk4.style.opacity = "1";
+    	eotk5.style.opacity = "0";
+    	eotk6.style.opacity = "0";
+    	aksghk1.style.opacity = "1";
+    	aksghk2.style.opacity = "1";
+    	aksghk3.style.opacity = "0";
+   } else if (t<5500) {
+    	akfvndtjs.style.opacity = "0";
+    	akfvndtjs1.style.opacity = "0";
+    	akfvndtjs2.style.opacity = "0";
+    	akfvndtjs3.style.opacity = "0";
+    	blackbox.style.opacity = "1";
+   	    eotk.style.opacity = "1";
+    	eotk1.style.opacity = "1";
+    	eotk2.style.opacity = "0";
+    	eotk3.style.opacity = "1";
+    	eotk4.style.opacity = "1";
+    	eotk5.style.opacity = "1";
+    	eotk6.style.opacity = "0";
+    	aksghk1.style.opacity = "1";
+    	aksghk2.style.opacity = "1";
+    	aksghk3.style.opacity = "1";
+
+    } else if (t<6500) {
+    	akfvndtjs.style.opacity = "0";
+    	akfvndtjs1.style.opacity = "0";
+    	akfvndtjs2.style.opacity = "0";
+    	akfvndtjs3.style.opacity = "0";
+    	blackbox.style.opacity = "0.5";
+   	    eotk.style.opacity = "1";
+    	eotk1.style.opacity = "1";
+    	eotk2.style.opacity = "0";
+    	eotk3.style.opacity = "1";
+    	eotk4.style.opacity = "1";
+    	eotk5.style.opacity = "1";
+    	eotk6.style.opacity = "0";
+    	aksghk1.style.opacity = "1";
+    	aksghk2.style.opacity = "1";
+    	aksghk3.style.opacity = "1";
+     } else if (t<7000) {
+    	akfvndtjs.style.opacity = "0";
+    	akfvndtjs1.style.opacity = "0";
+    	akfvndtjs2.style.opacity = "0";
+    	akfvndtjs3.style.opacity = "0";
+    	blackbox.style.opacity = "0";
+   	    eotk.style.opacity = "1";
+    	eotk1.style.opacity = "1";
+    	eotk2.style.opacity = "0";
+    	eotk3.style.opacity = "1";
+    	eotk4.style.opacity = "1";
+    	eotk5.style.opacity = "1";
+    	eotk6.style.opacity = "1";
+    	aksghk1.style.opacity = "1";
+    	aksghk2.style.opacity = "1";
+    	aksghk3.style.opacity = "1";
+    } else if (t<7500) {
+    	akfvndtjs.style.opacity = "0";
+    	akfvndtjs1.style.opacity = "0";
+    	akfvndtjs2.style.opacity = "0";
+    	akfvndtjs3.style.opacity = "0";
+    	blackbox.style.opacity = "0";
+   	    eotk.style.opacity = "1";
+    	eotk1.style.opacity = "1";
+    	eotk2.style.opacity = "0";
+    	eotk3.style.opacity = "1";
+    	eotk4.style.opacity = "1";
+    	eotk5.style.opacity = "1";
+    	eotk6.style.opacity = "1";
+    	aksghk1.style.opacity = "1";
+    	aksghk2.style.opacity = "1";
+    	aksghk3.style.opacity = "1";
+   }else if (t<8000) {
+    	akfvndtjs.style.opacity = "0";
+    	akfvndtjs1.style.opacity = "0";
+    	akfvndtjs2.style.opacity = "0";
+    	akfvndtjs3.style.opacity = "0";
+    	blackbox.style.opacity = "0";
+   	    eotk.style.opacity = "1";
+    	eotk1.style.opacity = "1";
+    	eotk2.style.opacity = "1";
+    	eotk3.style.opacity = "1";
+    	eotk4.style.opacity = "1";
+    	eotk5.style.opacity = "1";
+    	eotk6.style.opacity = "1";
+    	aksghk1.style.opacity = "1";
+    	aksghk2.style.opacity = "1";
+    	aksghk3.style.opacity = "1";
+    	manhwa1.style.opacity = "0";
+    	manhwa2.style.opacity = "0";
+    	manhwa3.style.opacity = "0";
+    	manhwa4.style.opacity = "0";
+    	manhwa5.style.opacity = "0";
+
+   }else if (t<8500) {
+    	akfvndtjs.style.opacity = "0";
+    	akfvndtjs1.style.opacity = "0";
+    	akfvndtjs2.style.opacity = "0";
+    	akfvndtjs3.style.opacity = "0";
+    	blackbox.style.opacity = "0";
+   	    eotk.style.opacity = "1";
+    	eotk1.style.opacity = "1";
+    	eotk2.style.opacity = "1";
+    	eotk3.style.opacity = "1";
+    	eotk4.style.opacity = "1";
+    	eotk5.style.opacity = "1";
+    	eotk6.style.opacity = "1";
+    	aksghk1.style.opacity = "1";
+    	aksghk2.style.opacity = "1";
+    	aksghk3.style.opacity = "1";
+    	blackbox2.style.opacity = "0.5";
+    	manhwa1.style.opacity = "0";
+    	manhwa2.style.opacity = "0";
+    	manhwa3.style.opacity = "0";
+    	manhwa4.style.opacity = "0";
+    	manhwa5.style.opacity = "0";
+    }else if (t<9000) {
+    	akfvndtjs.style.opacity = "0";
+    	akfvndtjs1.style.opacity = "0";
+    	akfvndtjs2.style.opacity = "0";
+    	akfvndtjs3.style.opacity = "0";
+    	blackbox.style.opacity = "0";
+   	    eotk.style.opacity = "1";
+    	eotk1.style.opacity = "1";
+    	eotk2.style.opacity = "1";
+    	eotk3.style.opacity = "1";
+    	eotk4.style.opacity = "1";
+    	eotk5.style.opacity = "1";
+    	eotk6.style.opacity = "1";
+    	aksghk1.style.opacity = "1";
+    	aksghk2.style.opacity = "1";
+    	aksghk3.style.opacity = "1";
+    	blackbox2.style.opacity = "0.5";
+    	manhwa1.style.opacity = "0";
+    	manhwa2.style.opacity = "0";
+    	manhwa3.style.opacity = "0";
+    	manhwa4.style.opacity = "0";
+    	manhwa5.style.opacity = "0";
+    	malpungsun1.style.opacity = "0";
+    	malpungsun2.style.opacity = "0";
+    	malpungsun3.style.opacity = "0";
+    	malpungsun4.style.opacity = "0";
+    	malpungsun5.style.opacity = "0";
+    }else if (t<9500) {
+    	akfvndtjs.style.opacity = "0";
+    	akfvndtjs1.style.opacity = "0";
+    	akfvndtjs2.style.opacity = "0";
+    	akfvndtjs3.style.opacity = "0";
+    	blackbox.style.opacity = "0";
+   	    eotk.style.opacity = "1";
+    	eotk1.style.opacity = "1";
+    	eotk2.style.opacity = "1";
+    	eotk3.style.opacity = "1";
+    	eotk4.style.opacity = "1";
+    	eotk5.style.opacity = "1";
+    	eotk6.style.opacity = "1";
+    	aksghk1.style.opacity = "1";
+    	aksghk2.style.opacity = "1";
+    	aksghk3.style.opacity = "1";
+    	blackbox2.style.opacity = "0.8";
+    	manhwa1.style.opacity = "0.5";
+    	manhwa2.style.opacity = "0";
+    	manhwa3.style.opacity = "0";
+    	manhwa4.style.opacity = "0";
+    	manhwa5.style.opacity = "0";
+    	malpungsun1.style.opacity = "0";
+    	malpungsun2.style.opacity = "0";
+    	malpungsun3.style.opacity = "0";
+    	malpungsun4.style.opacity = "0";
+    	malpungsun5.style.opacity = "0";
+    }else if (t<10000) {
+    	akfvndtjs.style.opacity = "0";
+    	akfvndtjs1.style.opacity = "0";
+    	akfvndtjs2.style.opacity = "0";
+    	akfvndtjs3.style.opacity = "0";
+    	blackbox.style.opacity = "0";
+   	    eotk.style.opacity = "1";
+    	eotk1.style.opacity = "1";
+    	eotk2.style.opacity = "1";
+    	eotk3.style.opacity = "1";
+    	eotk4.style.opacity = "1";
+    	eotk5.style.opacity = "1";
+    	eotk6.style.opacity = "1";
+    	aksghk1.style.opacity = "1";
+    	aksghk2.style.opacity = "1";
+    	aksghk3.style.opacity = "1";
+    	blackbox2.style.opacity = "1";
+    	manhwa1.style.opacity = "1";
+    	manhwa2.style.opacity = "0";
+    	manhwa3.style.opacity = "0";
+    	manhwa4.style.opacity = "0";
+    	manhwa5.style.opacity = "0";
+    	malpungsun1.style.opacity = "0";
+    	malpungsun2.style.opacity = "0";
+    	malpungsun3.style.opacity = "0";
+    	malpungsun4.style.opacity = "0";
+    	malpungsun5.style.opacity = "0";
+
+    }else if (t<11000) {
+    	akfvndtjs.style.opacity = "0";
+    	akfvndtjs1.style.opacity = "0";
+    	akfvndtjs2.style.opacity = "0";
+    	akfvndtjs3.style.opacity = "0";
+    	blackbox.style.opacity = "0";
+   	    eotk.style.opacity = "1";
+    	eotk1.style.opacity = "1";
+    	eotk2.style.opacity = "1";
+    	eotk3.style.opacity = "1";
+    	eotk4.style.opacity = "1";
+    	eotk5.style.opacity = "1";
+    	eotk6.style.opacity = "1";
+    	aksghk1.style.opacity = "1";
+    	aksghk2.style.opacity = "1";
+    	aksghk3.style.opacity = "1";
+    	blackbox2.style.opacity = "1";
+    	manhwa1.style.opacity = "1";
+    	manhwa2.style.opacity = "0";
+    	manhwa3.style.opacity = "0";
+    	manhwa4.style.opacity = "0";
+    	manhwa5.style.opacity = "0";
+    	malpungsun1.style.opacity = "0";
+    	malpungsun2.style.opacity = "0";
+    	malpungsun3.style.opacity = "0";
+    	malpungsun4.style.opacity = "0";
+    	malpungsun5.style.opacity = "0";
+    }else if (t<11500) {
+    	akfvndtjs.style.opacity = "0";
+    	akfvndtjs1.style.opacity = "0";
+    	akfvndtjs2.style.opacity = "0";
+    	akfvndtjs3.style.opacity = "0";
+    	blackbox.style.opacity = "0";
+   	    eotk.style.opacity = "1";
+    	eotk1.style.opacity = "1";
+    	eotk2.style.opacity = "1";
+    	eotk3.style.opacity = "1";
+    	eotk4.style.opacity = "1";
+    	eotk5.style.opacity = "1";
+    	eotk6.style.opacity = "1";
+    	aksghk1.style.opacity = "1";
+    	aksghk2.style.opacity = "1";
+    	aksghk3.style.opacity = "1";
+    	blackbox2.style.opacity = "1";
+    	manhwa1.style.opacity = "1";
+    	manhwa2.style.opacity = "1";
+    	manhwa3.style.opacity = "0";
+    	manhwa4.style.opacity = "0";
+    	manhwa5.style.opacity = "0";
+    	malpungsun1.style.opacity = "1";
+    	malpungsun2.style.opacity = "0";
+    	malpungsun3.style.opacity = "0";
+    	malpungsun4.style.opacity = "0";
+    	malpungsun5.style.opacity = "0";
+
+    }else if (t<11800) {
+    	akfvndtjs.style.opacity = "0";
+    	akfvndtjs1.style.opacity = "0";
+    	akfvndtjs2.style.opacity = "0";
+    	akfvndtjs3.style.opacity = "0";
+    	blackbox.style.opacity = "0";
+   	    eotk.style.opacity = "1";
+    	eotk1.style.opacity = "1";
+    	eotk2.style.opacity = "1";
+    	eotk3.style.opacity = "1";
+    	eotk4.style.opacity = "1";
+    	eotk5.style.opacity = "1";
+    	eotk6.style.opacity = "1";
+    	aksghk1.style.opacity = "1";
+    	aksghk2.style.opacity = "1";
+    	aksghk3.style.opacity = "1";
+    	blackbox2.style.opacity = "1";
+    	manhwa1.style.opacity = "1";
+    	manhwa2.style.opacity = "1";
+    	manhwa3.style.opacity = "1";
+    	manhwa4.style.opacity = "0";
+    	manhwa5.style.opacity = "0";
+    	malpungsun1.style.opacity = "1";
+    	malpungsun2.style.opacity = "1";
+    	malpungsun3.style.opacity = "1";
+    	malpungsun4.style.opacity = "0";
+    	malpungsun5.style.opacity = "0";
+    }else if (t<12300) {
+    	akfvndtjs.style.opacity = "0";
+    	akfvndtjs1.style.opacity = "0";
+    	akfvndtjs2.style.opacity = "0";
+    	akfvndtjs3.style.opacity = "0";
+    	blackbox.style.opacity = "0";
+   	    eotk.style.opacity = "1";
+    	eotk1.style.opacity = "1";
+    	eotk2.style.opacity = "1";
+    	eotk3.style.opacity = "1";
+    	eotk4.style.opacity = "1";
+    	eotk5.style.opacity = "1";
+    	eotk6.style.opacity = "1";
+    	aksghk1.style.opacity = "1";
+    	aksghk2.style.opacity = "1";
+    	aksghk3.style.opacity = "1";
+    	blackbox2.style.opacity = "1";
+    	manhwa1.style.opacity = "1";
+    	manhwa2.style.opacity = "1";
+    	manhwa3.style.opacity = "1";
+    	manhwa4.style.opacity = "0";
+    	manhwa5.style.opacity = "0";
+    	malpungsun1.style.opacity = "1";
+    	malpungsun2.style.opacity = "1";
+    	malpungsun3.style.opacity = "1";
+    	malpungsun4.style.opacity = "0";
+    	malpungsun5.style.opacity = "0";
+      }else if (t<12500) {
+    	akfvndtjs.style.opacity = "0";
+    	akfvndtjs1.style.opacity = "0";
+    	akfvndtjs2.style.opacity = "0";
+    	akfvndtjs3.style.opacity = "0";
+    	blackbox.style.opacity = "0";
+   	    eotk.style.opacity = "1";
+    	eotk1.style.opacity = "1";
+    	eotk2.style.opacity = "1";
+    	eotk3.style.opacity = "1";
+    	eotk4.style.opacity = "1";
+    	eotk5.style.opacity = "1";
+    	eotk6.style.opacity = "1";
+    	aksghk1.style.opacity = "1";
+    	aksghk2.style.opacity = "1";
+    	aksghk3.style.opacity = "1";
+    	blackbox2.style.opacity = "1";
+    	manhwa1.style.opacity = "1";
+    	manhwa2.style.opacity = "1";
+    	manhwa3.style.opacity = "1";
+    	manhwa4.style.opacity = "1";
+    	manhwa5.style.opacity = "0";
+    	malpungsun1.style.opacity = "1";
+    	malpungsun2.style.opacity = "1";
+    	malpungsun3.style.opacity = "1";
+    	malpungsun4.style.opacity = "1";
+    	malpungsun5.style.opacity = "0";
+    }else if (t<12600) {
+    	akfvndtjs.style.opacity = "0";
+    	akfvndtjs1.style.opacity = "0";
+    	akfvndtjs2.style.opacity = "0";
+    	akfvndtjs3.style.opacity = "0";
+    	blackbox.style.opacity = "0";
+   	    eotk.style.opacity = "1";
+    	eotk1.style.opacity = "1";
+    	eotk2.style.opacity = "1";
+    	eotk3.style.opacity = "1";
+    	eotk4.style.opacity = "1";
+    	eotk5.style.opacity = "1";
+    	eotk6.style.opacity = "1";
+    	aksghk1.style.opacity = "1";
+    	aksghk2.style.opacity = "1";
+    	aksghk3.style.opacity = "1";
+    	blackbox2.style.opacity = "1";
+    	manhwa1.style.opacity = "1";
+    	manhwa2.style.opacity = "1";
+    	manhwa3.style.opacity = "1";
+    	manhwa4.style.opacity = "1";
+    	manhwa5.style.opacity = "1";
+    	malpungsun1.style.opacity = "1";
+    	malpungsun2.style.opacity = "1";
+    	malpungsun3.style.opacity = "1";
+    	malpungsun4.style.opacity = "1";
+    	malpungsun5.style.opacity = "1";
+    	manhwa21.style.opacity = "0";
+    	manhwa22.style.opacity = "0";
+    	manhwa23.style.opacity = "0";
+    	manhwa24.style.opacity = "0";
+    	manhwa25.style.opacity = "0";
+    	malpungsun21.style.opacity = "0";
+    	malpungsun22.style.opacity = "0";
+    	malpungsun23.style.opacity = "0";
+    	malpungsun24.style.opacity = "0";
+    	malpungsun25.style.opacity = "0";
+    	malpungsun26.style.opacity = "0";
+    }else if (t<13500) {
+    	akfvndtjs.style.opacity = "0";
+    	akfvndtjs1.style.opacity = "0";
+    	akfvndtjs2.style.opacity = "0";
+    	akfvndtjs3.style.opacity = "0";
+    	blackbox.style.opacity = "0";
+   	    eotk.style.opacity = "1";
+    	eotk1.style.opacity = "1";
+    	eotk2.style.opacity = "1";
+    	eotk3.style.opacity = "1";
+    	eotk4.style.opacity = "1";
+    	eotk5.style.opacity = "1";
+    	eotk6.style.opacity = "1";
+    	aksghk1.style.opacity = "1";
+    	aksghk2.style.opacity = "1";
+    	aksghk3.style.opacity = "1";
+    	blackbox2.style.opacity = "1";
+    	manhwa1.style.opacity = "1";
+    	manhwa2.style.opacity = "1";
+    	manhwa3.style.opacity = "1";
+    	manhwa4.style.opacity = "1";
+    	manhwa5.style.opacity = "1";
+    	malpungsun1.style.opacity = "1";
+    	malpungsun2.style.opacity = "1";
+    	malpungsun3.style.opacity = "1";
+    	malpungsun4.style.opacity = "1";
+    	malpungsun5.style.opacity = "1";
+    	manhwa21.style.opacity = "0";
+    	manhwa22.style.opacity = "0";
+    	manhwa23.style.opacity = "0";
+    	manhwa24.style.opacity = "0";
+    	manhwa25.style.opacity = "0";
+    	malpungsun21.style.opacity = "0";
+    	malpungsun22.style.opacity = "0";
+    	malpungsun23.style.opacity = "0";
+    	malpungsun24.style.opacity = "0";
+    	malpungsun25.style.opacity = "0";
+    	malpungsun26.style.opacity = "0";
+    }else if (t<14000) {
+    	akfvndtjs.style.opacity = "0";
+    	akfvndtjs1.style.opacity = "0";
+    	akfvndtjs2.style.opacity = "0";
+    	akfvndtjs3.style.opacity = "0";
+    	blackbox.style.opacity = "0";
+   	    eotk.style.opacity = "1";
+    	eotk1.style.opacity = "1";
+    	eotk2.style.opacity = "1";
+    	eotk3.style.opacity = "1";
+    	eotk4.style.opacity = "1";
+    	eotk5.style.opacity = "1";
+    	eotk6.style.opacity = "1";
+    	aksghk1.style.opacity = "1";
+    	aksghk2.style.opacity = "1";
+    	aksghk3.style.opacity = "1";
+    	blackbox2.style.opacity = "1";
+    	manhwa1.style.opacity = "1";
+    	manhwa2.style.opacity = "1";
+    	manhwa3.style.opacity = "1";
+    	manhwa4.style.opacity = "1";
+    	manhwa5.style.opacity = "1";
+    	malpungsun1.style.opacity = "1";
+    	malpungsun2.style.opacity = "1";
+    	malpungsun3.style.opacity = "1";
+    	malpungsun4.style.opacity = "1";
+    	malpungsun5.style.opacity = "1";
+    	manhwa21.style.opacity = "1";
+    	manhwa22.style.opacity = "0";
+    	manhwa23.style.opacity = "0";
+    	manhwa24.style.opacity = "0";
+    	manhwa25.style.opacity = "0";
+    	malpungsun21.style.opacity = "0.5";
+    	malpungsun22.style.opacity = "0";
+    	malpungsun23.style.opacity = "0";
+    	malpungsun24.style.opacity = "0";
+    	malpungsun25.style.opacity = "0";
+    	malpungsun26.style.opacity = "0";
+    }else if (t<14100) {
+    	akfvndtjs.style.opacity = "0";
+    	akfvndtjs1.style.opacity = "0";
+    	akfvndtjs2.style.opacity = "0";
+    	akfvndtjs3.style.opacity = "0";
+    	blackbox.style.opacity = "0";
+   	    eotk.style.opacity = "1";
+    	eotk1.style.opacity = "1";
+    	eotk2.style.opacity = "1";
+    	eotk3.style.opacity = "1";
+    	eotk4.style.opacity = "1";
+    	eotk5.style.opacity = "1";
+    	eotk6.style.opacity = "1";
+    	aksghk1.style.opacity = "1";
+    	aksghk2.style.opacity = "1";
+    	aksghk3.style.opacity = "1";
+    	blackbox2.style.opacity = "1";
+    	manhwa1.style.opacity = "1";
+    	manhwa2.style.opacity = "1";
+    	manhwa3.style.opacity = "1";
+    	manhwa4.style.opacity = "1";
+    	manhwa5.style.opacity = "1";
+    	malpungsun1.style.opacity = "1";
+    	malpungsun2.style.opacity = "1";
+    	malpungsun3.style.opacity = "1";
+    	malpungsun4.style.opacity = "1";
+    	malpungsun5.style.opacity = "1";
+    	manhwa21.style.opacity = "1";
+    	manhwa22.style.opacity = "0.5";
+    	manhwa23.style.opacity = "0";
+    	manhwa24.style.opacity = "0";
+    	manhwa25.style.opacity = "0";
+    	malpungsun21.style.opacity = "1";
+    	malpungsun22.style.opacity = "0";
+    	malpungsun23.style.opacity = "0";
+    	malpungsun24.style.opacity = "0";
+    	malpungsun25.style.opacity = "0";
+    	malpungsun26.style.opacity = "0";
+    }else if (t<14300) {
+    	akfvndtjs.style.opacity = "0";
+    	akfvndtjs1.style.opacity = "0";
+    	akfvndtjs2.style.opacity = "0";
+    	akfvndtjs3.style.opacity = "0";
+    	blackbox.style.opacity = "0";
+   	    eotk.style.opacity = "1";
+    	eotk1.style.opacity = "1";
+    	eotk2.style.opacity = "1";
+    	eotk3.style.opacity = "1";
+    	eotk4.style.opacity = "1";
+    	eotk5.style.opacity = "1";
+    	eotk6.style.opacity = "1";
+    	aksghk1.style.opacity = "1";
+    	aksghk2.style.opacity = "1";
+    	aksghk3.style.opacity = "1";
+    	blackbox2.style.opacity = "1";
+    	manhwa1.style.opacity = "1";
+    	manhwa2.style.opacity = "1";
+    	manhwa3.style.opacity = "1";
+    	manhwa4.style.opacity = "1";
+    	manhwa5.style.opacity = "1";
+    	malpungsun1.style.opacity = "1";
+    	malpungsun2.style.opacity = "1";
+    	malpungsun3.style.opacity = "1";
+    	malpungsun4.style.opacity = "1";
+    	malpungsun5.style.opacity = "1";
+    	manhwa21.style.opacity = "1";
+    	manhwa22.style.opacity = "1";
+    	manhwa23.style.opacity = "0";
+    	manhwa24.style.opacity = "0";
+    	manhwa25.style.opacity = "0";
+    	malpungsun21.style.opacity = "1";
+    	malpungsun22.style.opacity = "1";
+    	malpungsun23.style.opacity = "0";
+    	malpungsun24.style.opacity = "0";
+    	malpungsun25.style.opacity = "0";
+    	malpungsun26.style.opacity = "0";
+    }else if (t<15800) {
+    	akfvndtjs.style.opacity = "0";
+    	akfvndtjs1.style.opacity = "0";
+    	akfvndtjs2.style.opacity = "0";
+    	akfvndtjs3.style.opacity = "0";
+    	blackbox.style.opacity = "0";
+   	    eotk.style.opacity = "1";
+    	eotk1.style.opacity = "1";
+    	eotk2.style.opacity = "1";
+    	eotk3.style.opacity = "1";
+    	eotk4.style.opacity = "1";
+    	eotk5.style.opacity = "1";
+    	eotk6.style.opacity = "1";
+    	aksghk1.style.opacity = "1";
+    	aksghk2.style.opacity = "1";
+    	aksghk3.style.opacity = "1";
+    	blackbox2.style.opacity = "1";
+    	manhwa1.style.opacity = "1";
+    	manhwa2.style.opacity = "1";
+    	manhwa3.style.opacity = "1";
+    	manhwa4.style.opacity = "1";
+    	manhwa5.style.opacity = "1";
+    	malpungsun1.style.opacity = "1";
+    	malpungsun2.style.opacity = "1";
+    	malpungsun3.style.opacity = "1";
+    	malpungsun4.style.opacity = "1";
+    	malpungsun5.style.opacity = "1";
+    	manhwa21.style.opacity = "1";
+    	manhwa22.style.opacity = "1";
+    	manhwa23.style.opacity = "0";
+    	manhwa24.style.opacity = "0";
+    	manhwa25.style.opacity = "0";
+    	malpungsun21.style.opacity = "1";
+    	malpungsun22.style.opacity = "1";
+    	malpungsun23.style.opacity = "0";
+    	malpungsun24.style.opacity = "0";
+    	malpungsun25.style.opacity = "0";
+    	malpungsun26.style.opacity = "0";
+    }else if (t<16100) {
+    	akfvndtjs.style.opacity = "0";
+    	akfvndtjs1.style.opacity = "0";
+    	akfvndtjs2.style.opacity = "0";
+    	akfvndtjs3.style.opacity = "0";
+    	blackbox.style.opacity = "0";
+   	    eotk.style.opacity = "1";
+    	eotk1.style.opacity = "1";
+    	eotk2.style.opacity = "1";
+    	eotk3.style.opacity = "1";
+    	eotk4.style.opacity = "1";
+    	eotk5.style.opacity = "1";
+    	eotk6.style.opacity = "1";
+    	aksghk1.style.opacity = "1";
+    	aksghk2.style.opacity = "1";
+    	aksghk3.style.opacity = "1";
+    	blackbox2.style.opacity = "1";
+    	manhwa1.style.opacity = "1";
+    	manhwa2.style.opacity = "1";
+    	manhwa3.style.opacity = "1";
+    	manhwa4.style.opacity = "1";
+    	manhwa5.style.opacity = "1";
+    	malpungsun1.style.opacity = "1";
+    	malpungsun2.style.opacity = "1";
+    	malpungsun3.style.opacity = "1";
+    	malpungsun4.style.opacity = "1";
+    	malpungsun5.style.opacity = "1";
+    	manhwa21.style.opacity = "1";
+    	manhwa22.style.opacity = "1";
+    	manhwa23.style.opacity = "1";
+    	manhwa24.style.opacity = "0";
+    	manhwa25.style.opacity = "0";
+    	malpungsun21.style.opacity = "1";
+    	malpungsun22.style.opacity = "1";
+    	malpungsun23.style.opacity = "0";
+    	malpungsun24.style.opacity = "0";
+    	malpungsun25.style.opacity = "0";
+    	malpungsun26.style.opacity = "0";
+    }else if (t<16200) {
+    	akfvndtjs.style.opacity = "0";
+    	akfvndtjs1.style.opacity = "0";
+    	akfvndtjs2.style.opacity = "0";
+    	akfvndtjs3.style.opacity = "0";
+    	blackbox.style.opacity = "0";
+   	    eotk.style.opacity = "1";
+    	eotk1.style.opacity = "1";
+    	eotk2.style.opacity = "1";
+    	eotk3.style.opacity = "1";
+    	eotk4.style.opacity = "1";
+    	eotk5.style.opacity = "1";
+    	eotk6.style.opacity = "1";
+    	aksghk1.style.opacity = "1";
+    	aksghk2.style.opacity = "1";
+    	aksghk3.style.opacity = "1";
+    	blackbox2.style.opacity = "1";
+    	manhwa1.style.opacity = "1";
+    	manhwa2.style.opacity = "1";
+    	manhwa3.style.opacity = "1";
+    	manhwa4.style.opacity = "1";
+    	manhwa5.style.opacity = "1";
+    	malpungsun1.style.opacity = "1";
+    	malpungsun2.style.opacity = "1";
+    	malpungsun3.style.opacity = "1";
+    	malpungsun4.style.opacity = "1";
+    	malpungsun5.style.opacity = "1";
+    	manhwa21.style.opacity = "1";
+    	manhwa22.style.opacity = "1";
+    	manhwa23.style.opacity = "1";
+    	manhwa24.style.opacity = "0";
+    	manhwa25.style.opacity = "0";
+    	malpungsun21.style.opacity = "1";
+    	malpungsun22.style.opacity = "1";
+    	malpungsun23.style.opacity = "1";
+    	malpungsun24.style.opacity = "0";
+    	malpungsun25.style.opacity = "0";
+    	malpungsun26.style.opacity = "0";
+    }else if (t<16400) {
+    	akfvndtjs.style.opacity = "0";
+    	akfvndtjs1.style.opacity = "0";
+    	akfvndtjs2.style.opacity = "0";
+    	akfvndtjs3.style.opacity = "0";
+    	blackbox.style.opacity = "0";
+   	    eotk.style.opacity = "1";
+    	eotk1.style.opacity = "1";
+    	eotk2.style.opacity = "1";
+    	eotk3.style.opacity = "1";
+    	eotk4.style.opacity = "1";
+    	eotk5.style.opacity = "1";
+    	eotk6.style.opacity = "1";
+    	aksghk1.style.opacity = "1";
+    	aksghk2.style.opacity = "1";
+    	aksghk3.style.opacity = "1";
+    	blackbox2.style.opacity = "1";
+    	manhwa1.style.opacity = "1";
+    	manhwa2.style.opacity = "1";
+    	manhwa3.style.opacity = "1";
+    	manhwa4.style.opacity = "1";
+    	manhwa5.style.opacity = "1";
+    	malpungsun1.style.opacity = "1";
+    	malpungsun2.style.opacity = "1";
+    	malpungsun3.style.opacity = "1";
+    	malpungsun4.style.opacity = "1";
+    	malpungsun5.style.opacity = "1";
+    	manhwa21.style.opacity = "1";
+    	manhwa22.style.opacity = "1";
+    	manhwa23.style.opacity = "1";
+    	manhwa24.style.opacity = "0";
+    	manhwa25.style.opacity = "0";
+    	malpungsun21.style.opacity = "1";
+    	malpungsun22.style.opacity = "1";
+    	malpungsun23.style.opacity = "1";
+    	malpungsun24.style.opacity = "1";
+    	malpungsun25.style.opacity = "0";
+    	malpungsun26.style.opacity = "0";
+    }else if (t<17500) {
+    	akfvndtjs.style.opacity = "0";
+    	akfvndtjs1.style.opacity = "0";
+    	akfvndtjs2.style.opacity = "0";
+    	akfvndtjs3.style.opacity = "0";
+    	blackbox.style.opacity = "0";
+   	    eotk.style.opacity = "1";
+    	eotk1.style.opacity = "1";
+    	eotk2.style.opacity = "1";
+    	eotk3.style.opacity = "1";
+    	eotk4.style.opacity = "1";
+    	eotk5.style.opacity = "1";
+    	eotk6.style.opacity = "1";
+    	aksghk1.style.opacity = "1";
+    	aksghk2.style.opacity = "1";
+    	aksghk3.style.opacity = "1";
+    	blackbox2.style.opacity = "1";
+    	manhwa1.style.opacity = "1";
+    	manhwa2.style.opacity = "1";
+    	manhwa3.style.opacity = "1";
+    	manhwa4.style.opacity = "1";
+    	manhwa5.style.opacity = "1";
+    	malpungsun1.style.opacity = "1";
+    	malpungsun2.style.opacity = "1";
+    	malpungsun3.style.opacity = "1";
+    	malpungsun4.style.opacity = "1";
+    	malpungsun5.style.opacity = "1";
+    	manhwa21.style.opacity = "1";
+    	manhwa22.style.opacity = "1";
+    	manhwa23.style.opacity = "1";
+    	manhwa24.style.opacity = "0";
+    	manhwa25.style.opacity = "0";
+    	malpungsun21.style.opacity = "1";
+    	malpungsun22.style.opacity = "1";
+    	malpungsun23.style.opacity = "1";
+    	malpungsun24.style.opacity = "1";
+    	malpungsun25.style.opacity = "0";
+    	malpungsun26.style.opacity = "0";
+    }else if (t<17900) {
+    	akfvndtjs.style.opacity = "0";
+    	akfvndtjs1.style.opacity = "0";
+    	akfvndtjs2.style.opacity = "0";
+    	akfvndtjs3.style.opacity = "0";
+    	blackbox.style.opacity = "0";
+   	    eotk.style.opacity = "1";
+    	eotk1.style.opacity = "1";
+    	eotk2.style.opacity = "1";
+    	eotk3.style.opacity = "1";
+    	eotk4.style.opacity = "1";
+    	eotk5.style.opacity = "1";
+    	eotk6.style.opacity = "1";
+    	aksghk1.style.opacity = "1";
+    	aksghk2.style.opacity = "1";
+    	aksghk3.style.opacity = "1";
+    	blackbox2.style.opacity = "1";
+    	manhwa1.style.opacity = "1";
+    	manhwa2.style.opacity = "1";
+    	manhwa3.style.opacity = "1";
+    	manhwa4.style.opacity = "1";
+    	manhwa5.style.opacity = "1";
+    	malpungsun1.style.opacity = "1";
+    	malpungsun2.style.opacity = "1";
+    	malpungsun3.style.opacity = "1";
+    	malpungsun4.style.opacity = "1";
+    	malpungsun5.style.opacity = "1";
+    	manhwa21.style.opacity = "1";
+    	manhwa22.style.opacity = "1";
+    	manhwa23.style.opacity = "1";
+    	manhwa24.style.opacity = "1";
+    	manhwa25.style.opacity = "0";
+    	malpungsun21.style.opacity = "1";
+    	malpungsun22.style.opacity = "1";
+    	malpungsun23.style.opacity = "1";
+    	malpungsun24.style.opacity = "1";
+    	malpungsun25.style.opacity = "1";
+    	malpungsun26.style.opacity = "0";
+    }else if (t<18000) {
+    	akfvndtjs.style.opacity = "0";
+    	akfvndtjs1.style.opacity = "0";
+    	akfvndtjs2.style.opacity = "0";
+    	akfvndtjs3.style.opacity = "0";
+    	blackbox.style.opacity = "0";
+   	    eotk.style.opacity = "1";
+    	eotk1.style.opacity = "1";
+    	eotk2.style.opacity = "1";
+    	eotk3.style.opacity = "1";
+    	eotk4.style.opacity = "1";
+    	eotk5.style.opacity = "1";
+    	eotk6.style.opacity = "1";
+    	aksghk1.style.opacity = "1";
+    	aksghk2.style.opacity = "1";
+    	aksghk3.style.opacity = "1";
+    	blackbox2.style.opacity = "1";
+    	manhwa1.style.opacity = "1";
+    	manhwa2.style.opacity = "1";
+    	manhwa3.style.opacity = "1";
+    	manhwa4.style.opacity = "1";
+    	manhwa5.style.opacity = "1";
+    	malpungsun1.style.opacity = "1";
+    	malpungsun2.style.opacity = "1";
+    	malpungsun3.style.opacity = "1";
+    	malpungsun4.style.opacity = "1";
+    	malpungsun5.style.opacity = "1";
+    	manhwa21.style.opacity = "1";
+    	manhwa22.style.opacity = "1";
+    	manhwa23.style.opacity = "1";
+    	manhwa24.style.opacity = "1";
+    	manhwa25.style.opacity = "1";
+    	malpungsun21.style.opacity = "1";
+    	malpungsun22.style.opacity = "1";
+    	malpungsun23.style.opacity = "1";
+    	malpungsun24.style.opacity = "1";
+    	malpungsun25.style.opacity = "1";
+    	malpungsun26.style.opacity = "0";
+    }else if (t<18050) {
+    	akfvndtjs.style.opacity = "0";
+    	akfvndtjs1.style.opacity = "0";
+    	akfvndtjs2.style.opacity = "0";
+    	akfvndtjs3.style.opacity = "0";
+    	blackbox.style.opacity = "0";
+   	    eotk.style.opacity = "1";
+    	eotk1.style.opacity = "1";
+    	eotk2.style.opacity = "1";
+    	eotk3.style.opacity = "1";
+    	eotk4.style.opacity = "1";
+    	eotk5.style.opacity = "1";
+    	eotk6.style.opacity = "1";
+    	aksghk1.style.opacity = "1";
+    	aksghk2.style.opacity = "1";
+    	aksghk3.style.opacity = "1";
+    	blackbox2.style.opacity = "1";
+    	manhwa1.style.opacity = "1";
+    	manhwa2.style.opacity = "1";
+    	manhwa3.style.opacity = "1";
+    	manhwa4.style.opacity = "1";
+    	manhwa5.style.opacity = "1";
+    	malpungsun1.style.opacity = "1";
+    	malpungsun2.style.opacity = "1";
+    	malpungsun3.style.opacity = "1";
+    	malpungsun4.style.opacity = "1";
+    	malpungsun5.style.opacity = "1";
+    	manhwa21.style.opacity = "1";
+    	manhwa22.style.opacity = "1";
+    	manhwa23.style.opacity = "1";
+    	manhwa24.style.opacity = "1";
+    	manhwa25.style.opacity = "1";
+    	malpungsun21.style.opacity = "1";
+    	malpungsun22.style.opacity = "1";
+    	malpungsun23.style.opacity = "1";
+    	malpungsun24.style.opacity = "1";
+    	malpungsun25.style.opacity = "1";
+    	malpungsun26.style.opacity = "0";
+    	gyrhkdma1.style.opacity="0";
+     }else if (t<18500) {
+    	akfvndtjs.style.opacity = "0";
+    	akfvndtjs1.style.opacity = "0";
+    	akfvndtjs2.style.opacity = "0";
+    	akfvndtjs3.style.opacity = "0";
+    	blackbox.style.opacity = "0";
+   	    eotk.style.opacity = "1";
+    	eotk1.style.opacity = "1";
+    	eotk2.style.opacity = "1";
+    	eotk3.style.opacity = "1";
+    	eotk4.style.opacity = "1";
+    	eotk5.style.opacity = "1";
+    	eotk6.style.opacity = "1";
+    	aksghk1.style.opacity = "1";
+    	aksghk2.style.opacity = "1";
+    	aksghk3.style.opacity = "1";
+    	blackbox2.style.opacity = "1";
+    	manhwa1.style.opacity = "1";
+    	manhwa2.style.opacity = "1";
+    	manhwa3.style.opacity = "1";
+    	manhwa4.style.opacity = "1";
+    	manhwa5.style.opacity = "1";
+    	malpungsun1.style.opacity = "1";
+    	malpungsun2.style.opacity = "1";
+    	malpungsun3.style.opacity = "1";
+    	malpungsun4.style.opacity = "1";
+    	malpungsun5.style.opacity = "1";
+    	manhwa21.style.opacity = "1";
+    	manhwa22.style.opacity = "1";
+    	manhwa23.style.opacity = "1";
+    	manhwa24.style.opacity = "1";
+    	manhwa25.style.opacity = "1";
+    	malpungsun21.style.opacity = "1";
+    	malpungsun22.style.opacity = "1";
+    	malpungsun23.style.opacity = "1";
+    	malpungsun24.style.opacity = "1";
+    	malpungsun25.style.opacity = "1";
+    	malpungsun26.style.opacity = "0";
+    	gyrhkdma1.style.opacity="0";
+    }else if (t<19300) {
+    	akfvndtjs.style.opacity = "0";
+    	akfvndtjs1.style.opacity = "0";
+    	akfvndtjs2.style.opacity = "0";
+    	akfvndtjs3.style.opacity = "0";
+    	blackbox.style.opacity = "0";
+   	    eotk.style.opacity = "1";
+    	eotk1.style.opacity = "1";
+    	eotk2.style.opacity = "1";
+    	eotk3.style.opacity = "1";
+    	eotk4.style.opacity = "1";
+    	eotk5.style.opacity = "1";
+    	eotk6.style.opacity = "1";
+    	aksghk1.style.opacity = "1";
+    	aksghk2.style.opacity = "1";
+    	aksghk3.style.opacity = "1";
+    	blackbox2.style.opacity = "1";
+    	manhwa1.style.opacity = "1";
+    	manhwa2.style.opacity = "1";
+    	manhwa3.style.opacity = "1";
+    	manhwa4.style.opacity = "1";
+    	manhwa5.style.opacity = "1";
+    	malpungsun1.style.opacity = "1";
+    	malpungsun2.style.opacity = "1";
+    	malpungsun3.style.opacity = "1";
+    	malpungsun4.style.opacity = "1";
+    	malpungsun5.style.opacity = "1";
+    	manhwa21.style.opacity = "1";
+    	manhwa22.style.opacity = "1";
+    	manhwa23.style.opacity = "1";
+    	manhwa24.style.opacity = "1";
+    	manhwa25.style.opacity = "1";
+    	malpungsun21.style.opacity = "1";
+    	malpungsun22.style.opacity = "1";
+    	malpungsun23.style.opacity = "1";
+    	malpungsun24.style.opacity = "1";
+    	malpungsun25.style.opacity = "1";
+    	malpungsun26.style.opacity = "1";
+    	gyrhkdma1.style.opacity="0";
+
+    }else if (t<19350) {
+    	akfvndtjs.style.opacity = "0";
+    	akfvndtjs1.style.opacity = "0";
+    	akfvndtjs2.style.opacity = "0";
+    	akfvndtjs3.style.opacity = "0";
+    	blackbox.style.opacity = "0";
+   	    eotk.style.opacity = "1";
+    	eotk1.style.opacity = "1";
+    	eotk2.style.opacity = "1";
+    	eotk3.style.opacity = "1";
+    	eotk4.style.opacity = "1";
+    	eotk5.style.opacity = "1";
+    	eotk6.style.opacity = "1";
+    	aksghk1.style.opacity = "1";
+    	aksghk2.style.opacity = "1";
+    	aksghk3.style.opacity = "1";
+    	blackbox2.style.opacity = "1";
+    	manhwa1.style.opacity = "1";
+    	manhwa2.style.opacity = "1";
+    	manhwa3.style.opacity = "1";
+    	manhwa4.style.opacity = "1";
+    	manhwa5.style.opacity = "1";
+    	malpungsun1.style.opacity = "1";
+    	malpungsun2.style.opacity = "1";
+    	malpungsun3.style.opacity = "1";
+    	malpungsun4.style.opacity = "1";
+    	malpungsun5.style.opacity = "1";
+    	manhwa21.style.opacity = "1";
+    	manhwa22.style.opacity = "1";
+    	manhwa23.style.opacity = "1";
+    	manhwa24.style.opacity = "1";
+    	manhwa25.style.opacity = "1";
+    	malpungsun21.style.opacity = "1";
+    	malpungsun22.style.opacity = "1";
+    	malpungsun23.style.opacity = "1";
+    	malpungsun24.style.opacity = "1";
+    	malpungsun25.style.opacity = "1";
+    	malpungsun26.style.opacity = "1";
+    	gyrhkdma1.style.opacity="1";
+    	manhwa31.style.opacity = "0";
+    	manhwa32.style.opacity = "0";
+    	manhwa33.style.opacity = "0";
+    	manhwa34.style.opacity = "0";
+    	manhwa35.style.opacity = "0";
+    	manhwa36.style.opacity = "0";
+    	malpungsun31.style.opacity = "0";
+    	malpungsun32.style.opacity = "0";
+     }else if (t<20000) {
+    	akfvndtjs.style.opacity = "0";
+    	akfvndtjs1.style.opacity = "0";
+    	akfvndtjs2.style.opacity = "0";
+    	akfvndtjs3.style.opacity = "0";
+    	blackbox.style.opacity = "0";
+   	    eotk.style.opacity = "1";
+    	eotk1.style.opacity = "1";
+    	eotk2.style.opacity = "1";
+    	eotk3.style.opacity = "1";
+    	eotk4.style.opacity = "1";
+    	eotk5.style.opacity = "1";
+    	eotk6.style.opacity = "1";
+    	aksghk1.style.opacity = "1";
+    	aksghk2.style.opacity = "1";
+    	aksghk3.style.opacity = "1";
+    	blackbox2.style.opacity = "1";
+    	manhwa1.style.opacity = "1";
+    	manhwa2.style.opacity = "1";
+    	manhwa3.style.opacity = "1";
+    	manhwa4.style.opacity = "1";
+    	manhwa5.style.opacity = "1";
+    	malpungsun1.style.opacity = "1";
+    	malpungsun2.style.opacity = "1";
+    	malpungsun3.style.opacity = "1";
+    	malpungsun4.style.opacity = "1";
+    	malpungsun5.style.opacity = "1";
+    	manhwa21.style.opacity = "1";
+    	manhwa22.style.opacity = "1";
+    	manhwa23.style.opacity = "1";
+    	manhwa24.style.opacity = "1";
+    	manhwa25.style.opacity = "1";
+    	malpungsun21.style.opacity = "1";
+    	malpungsun22.style.opacity = "1";
+    	malpungsun23.style.opacity = "1";
+    	malpungsun24.style.opacity = "1";
+    	malpungsun25.style.opacity = "1";
+    	malpungsun26.style.opacity = "1";
+    	gyrhkdma1.style.opacity="1";
+    	manhwa31.style.opacity = "0";
+    	manhwa32.style.opacity = "0";
+    	manhwa33.style.opacity = "0";
+    	manhwa34.style.opacity = "0";
+    	manhwa35.style.opacity = "0";
+    	malpungsun31.style.opacity = "0";
+    	malpungsun32.style.opacity = "0";
+     }else if (t<20800) {
+    	akfvndtjs.style.opacity = "0";
+    	akfvndtjs1.style.opacity = "0";
+    	akfvndtjs2.style.opacity = "0";
+    	akfvndtjs3.style.opacity = "0";
+    	blackbox.style.opacity = "0";
+   	    eotk.style.opacity = "1";
+    	eotk1.style.opacity = "1";
+    	eotk2.style.opacity = "1";
+    	eotk3.style.opacity = "1";
+    	eotk4.style.opacity = "1";
+    	eotk5.style.opacity = "1";
+    	eotk6.style.opacity = "1";
+    	aksghk1.style.opacity = "1";
+    	aksghk2.style.opacity = "1";
+    	aksghk3.style.opacity = "1";
+    	blackbox2.style.opacity = "1";
+    	manhwa1.style.opacity = "1";
+    	manhwa2.style.opacity = "1";
+    	manhwa3.style.opacity = "1";
+    	manhwa4.style.opacity = "1";
+    	manhwa5.style.opacity = "1";
+    	malpungsun1.style.opacity = "1";
+    	malpungsun2.style.opacity = "1";
+    	malpungsun3.style.opacity = "1";
+    	malpungsun4.style.opacity = "1";
+    	malpungsun5.style.opacity = "1";
+    	manhwa21.style.opacity = "1";
+    	manhwa22.style.opacity = "1";
+    	manhwa23.style.opacity = "1";
+    	manhwa24.style.opacity = "1";
+    	manhwa25.style.opacity = "1";
+    	malpungsun21.style.opacity = "1";
+    	malpungsun22.style.opacity = "1";
+    	malpungsun23.style.opacity = "1";
+    	malpungsun24.style.opacity = "1";
+    	malpungsun25.style.opacity = "1";
+    	malpungsun26.style.opacity = "1";
+    	gyrhkdma1.style.opacity="1";
+    	manhwa31.style.opacity = "1";
+    	manhwa32.style.opacity = "0";
+    	manhwa33.style.opacity = "0";
+    	manhwa34.style.opacity = "0";
+    	manhwa35.style.opacity = "0";
+    	manhwa36.style.opacity = "0";
+    	malpungsun31.style.opacity = "0";
+    	malpungsun32.style.opacity = "0";
+    }else if (t<20900) {
+    	akfvndtjs.style.opacity = "0";
+    	akfvndtjs1.style.opacity = "0";
+    	akfvndtjs2.style.opacity = "0";
+    	akfvndtjs3.style.opacity = "0";
+    	blackbox.style.opacity = "0";
+   	    eotk.style.opacity = "1";
+    	eotk1.style.opacity = "1";
+    	eotk2.style.opacity = "1";
+    	eotk3.style.opacity = "1";
+    	eotk4.style.opacity = "1";
+    	eotk5.style.opacity = "1";
+    	eotk6.style.opacity = "1";
+    	aksghk1.style.opacity = "1";
+    	aksghk2.style.opacity = "1";
+    	aksghk3.style.opacity = "1";
+    	blackbox2.style.opacity = "1";
+    	manhwa1.style.opacity = "1";
+    	manhwa2.style.opacity = "1";
+    	manhwa3.style.opacity = "1";
+    	manhwa4.style.opacity = "1";
+    	manhwa5.style.opacity = "1";
+    	malpungsun1.style.opacity = "1";
+    	malpungsun2.style.opacity = "1";
+    	malpungsun3.style.opacity = "1";
+    	malpungsun4.style.opacity = "1";
+    	malpungsun5.style.opacity = "1";
+    	manhwa21.style.opacity = "1";
+    	manhwa22.style.opacity = "1";
+    	manhwa23.style.opacity = "1";
+    	manhwa24.style.opacity = "1";
+    	manhwa25.style.opacity = "1";
+    	malpungsun21.style.opacity = "1";
+    	malpungsun22.style.opacity = "1";
+    	malpungsun23.style.opacity = "1";
+    	malpungsun24.style.opacity = "1";
+    	malpungsun25.style.opacity = "1";
+    	malpungsun26.style.opacity = "1";
+    	gyrhkdma1.style.opacity="1";
+    	manhwa31.style.opacity = "0";
+    	manhwa32.style.opacity = "0";
+    	manhwa33.style.opacity = "0";
+    	manhwa34.style.opacity = "0";
+    	manhwa35.style.opacity = "0";
+    	malpungsun31.style.opacity = "1";
+    	malpungsun32.style.opacity = "0";
+     }else if (t<21500) {
+    	akfvndtjs.style.opacity = "0";
+    	akfvndtjs1.style.opacity = "0";
+    	akfvndtjs2.style.opacity = "0";
+    	akfvndtjs3.style.opacity = "0";
+    	blackbox.style.opacity = "0";
+   	    eotk.style.opacity = "1";
+    	eotk1.style.opacity = "1";
+    	eotk2.style.opacity = "1";
+    	eotk3.style.opacity = "1";
+    	eotk4.style.opacity = "1";
+    	eotk5.style.opacity = "1";
+    	eotk6.style.opacity = "1";
+    	aksghk1.style.opacity = "1";
+    	aksghk2.style.opacity = "1";
+    	aksghk3.style.opacity = "1";
+    	blackbox2.style.opacity = "1";
+    	manhwa1.style.opacity = "1";
+    	manhwa2.style.opacity = "1";
+    	manhwa3.style.opacity = "1";
+    	manhwa4.style.opacity = "1";
+    	manhwa5.style.opacity = "1";
+    	malpungsun1.style.opacity = "1";
+    	malpungsun2.style.opacity = "1";
+    	malpungsun3.style.opacity = "1";
+    	malpungsun4.style.opacity = "1";
+    	malpungsun5.style.opacity = "1";
+    	manhwa21.style.opacity = "1";
+    	manhwa22.style.opacity = "1";
+    	manhwa23.style.opacity = "1";
+    	manhwa24.style.opacity = "1";
+    	manhwa25.style.opacity = "1";
+    	malpungsun21.style.opacity = "1";
+    	malpungsun22.style.opacity = "1";
+    	malpungsun23.style.opacity = "1";
+    	malpungsun24.style.opacity = "1";
+    	malpungsun25.style.opacity = "1";
+    	malpungsun26.style.opacity = "1";
+    	gyrhkdma1.style.opacity="1";
+    	manhwa31.style.opacity = "0";
+    	manhwa32.style.opacity = "1";
+    	manhwa33.style.opacity = "0";
+    	manhwa34.style.opacity = "0";
+    	manhwa35.style.opacity = "0";
+    	manhwa36.style.opacity = "0";
+    	malpungsun31.style.opacity = "1";
+    	malpungsun32.style.opacity = "0";
+    }else if (t<21700) {
+    	akfvndtjs.style.opacity = "0";
+    	akfvndtjs1.style.opacity = "0";
+    	akfvndtjs2.style.opacity = "0";
+    	akfvndtjs3.style.opacity = "0";
+    	blackbox.style.opacity = "0";
+   	    eotk.style.opacity = "1";
+    	eotk1.style.opacity = "1";
+    	eotk2.style.opacity = "1";
+    	eotk3.style.opacity = "1";
+    	eotk4.style.opacity = "1";
+    	eotk5.style.opacity = "1";
+    	eotk6.style.opacity = "1";
+    	aksghk1.style.opacity = "1";
+    	aksghk2.style.opacity = "1";
+    	aksghk3.style.opacity = "1";
+    	blackbox2.style.opacity = "1";
+    	manhwa1.style.opacity = "1";
+    	manhwa2.style.opacity = "1";
+    	manhwa3.style.opacity = "1";
+    	manhwa4.style.opacity = "1";
+    	manhwa5.style.opacity = "1";
+    	malpungsun1.style.opacity = "1";
+    	malpungsun2.style.opacity = "1";
+    	malpungsun3.style.opacity = "1";
+    	malpungsun4.style.opacity = "1";
+    	malpungsun5.style.opacity = "1";
+    	manhwa21.style.opacity = "1";
+    	manhwa22.style.opacity = "1";
+    	manhwa23.style.opacity = "1";
+    	manhwa24.style.opacity = "1";
+    	manhwa25.style.opacity = "1";
+    	malpungsun21.style.opacity = "1";
+    	malpungsun22.style.opacity = "1";
+    	malpungsun23.style.opacity = "1";
+    	malpungsun24.style.opacity = "1";
+    	malpungsun25.style.opacity = "1";
+    	malpungsun26.style.opacity = "1";
+    	gyrhkdma1.style.opacity="1";
+    	manhwa31.style.opacity = "0";
+    	manhwa32.style.opacity = "0";
+    	manhwa33.style.opacity = "0";
+    	manhwa34.style.opacity = "0";
+    	manhwa35.style.opacity = "0";
+    	manhwa36.style.opacity = "0";
+    	malpungsun31.style.opacity = "1";
+    	malpungsun32.style.opacity = "1";
+    	gyrhkdma2.style.opacity="0";
+    	gyrhkdma3.style.opacity="0";
+    }else if (t<22500) {
+    	akfvndtjs.style.opacity = "0";
+    	akfvndtjs1.style.opacity = "0";
+    	akfvndtjs2.style.opacity = "0";
+    	akfvndtjs3.style.opacity = "0";
+    	blackbox.style.opacity = "0";
+   	    eotk.style.opacity = "1";
+    	eotk1.style.opacity = "1";
+    	eotk2.style.opacity = "1";
+    	eotk3.style.opacity = "1";
+    	eotk4.style.opacity = "1";
+    	eotk5.style.opacity = "1";
+    	eotk6.style.opacity = "1";
+    	aksghk1.style.opacity = "1";
+    	aksghk2.style.opacity = "1";
+    	aksghk3.style.opacity = "1";
+    	blackbox2.style.opacity = "1";
+    	manhwa1.style.opacity = "1";
+    	manhwa2.style.opacity = "1";
+    	manhwa3.style.opacity = "1";
+    	manhwa4.style.opacity = "1";
+    	manhwa5.style.opacity = "1";
+    	malpungsun1.style.opacity = "1";
+    	malpungsun2.style.opacity = "1";
+    	malpungsun3.style.opacity = "1";
+    	malpungsun4.style.opacity = "1";
+    	malpungsun5.style.opacity = "1";
+    	manhwa21.style.opacity = "1";
+    	manhwa22.style.opacity = "1";
+    	manhwa23.style.opacity = "1";
+    	manhwa24.style.opacity = "1";
+    	manhwa25.style.opacity = "1";
+    	malpungsun21.style.opacity = "1";
+    	malpungsun22.style.opacity = "1";
+    	malpungsun23.style.opacity = "1";
+    	malpungsun24.style.opacity = "1";
+    	malpungsun25.style.opacity = "1";
+    	malpungsun26.style.opacity = "1";
+    	gyrhkdma1.style.opacity="1";
+    	manhwa31.style.opacity = "0";
+    	manhwa32.style.opacity = "0";
+    	manhwa33.style.opacity = "0";
+    	manhwa34.style.opacity = "0";
+    	manhwa35.style.opacity = "0";
+    	manhwa36.style.opacity = "0";
+    	malpungsun31.style.opacity = "1";
+    	malpungsun32.style.opacity = "1";
+    	gyrhkdma2.style.opacity="0";
+    	gyrhkdma3.style.opacity="0";
+
+    }else if (t<23000) {
+    	akfvndtjs.style.opacity = "0";
+    	akfvndtjs1.style.opacity = "0";
+    	akfvndtjs2.style.opacity = "0";
+    	akfvndtjs3.style.opacity = "0";
+    	blackbox.style.opacity = "0";
+   	    eotk.style.opacity = "1";
+    	eotk1.style.opacity = "1";
+    	eotk2.style.opacity = "1";
+    	eotk3.style.opacity = "1";
+    	eotk4.style.opacity = "1";
+    	eotk5.style.opacity = "1";
+    	eotk6.style.opacity = "1";
+    	aksghk1.style.opacity = "1";
+    	aksghk2.style.opacity = "1";
+    	aksghk3.style.opacity = "1";
+    	blackbox2.style.opacity = "1";
+    	manhwa1.style.opacity = "1";
+    	manhwa2.style.opacity = "1";
+    	manhwa3.style.opacity = "1";
+    	manhwa4.style.opacity = "1";
+    	manhwa5.style.opacity = "1";
+    	malpungsun1.style.opacity = "1";
+    	malpungsun2.style.opacity = "1";
+    	malpungsun3.style.opacity = "1";
+    	malpungsun4.style.opacity = "1";
+    	malpungsun5.style.opacity = "1";
+    	manhwa21.style.opacity = "1";
+    	manhwa22.style.opacity = "1";
+    	manhwa23.style.opacity = "1";
+    	manhwa24.style.opacity = "1";
+    	manhwa25.style.opacity = "1";
+    	malpungsun21.style.opacity = "1";
+    	malpungsun22.style.opacity = "1";
+    	malpungsun23.style.opacity = "1";
+    	malpungsun24.style.opacity = "1";
+    	malpungsun25.style.opacity = "1";
+    	malpungsun26.style.opacity = "1";
+    	gyrhkdma1.style.opacity="1";
+    	manhwa31.style.opacity = "0";
+    	manhwa32.style.opacity = "0";
+    	manhwa33.style.opacity = "1";
+    	manhwa34.style.opacity = "0";
+    	manhwa35.style.opacity = "0";
+    	manhwa36.style.opacity = "0";
+    	malpungsun31.style.opacity = "1";
+    	malpungsun32.style.opacity = "1";
+    	gyrhkdma2.style.opacity="0";
+    	gyrhkdma3.style.opacity="0";
+     }else if (t<23050) {
+    	akfvndtjs.style.opacity = "0";
+    	akfvndtjs1.style.opacity = "0";
+    	akfvndtjs2.style.opacity = "0";
+    	akfvndtjs3.style.opacity = "0";
+    	blackbox.style.opacity = "0";
+   	    eotk.style.opacity = "1";
+    	eotk1.style.opacity = "1";
+    	eotk2.style.opacity = "1";
+    	eotk3.style.opacity = "1";
+    	eotk4.style.opacity = "1";
+    	eotk5.style.opacity = "1";
+    	eotk6.style.opacity = "1";
+    	aksghk1.style.opacity = "1";
+    	aksghk2.style.opacity = "1";
+    	aksghk3.style.opacity = "1";
+    	blackbox2.style.opacity = "1";
+    	manhwa1.style.opacity = "1";
+    	manhwa2.style.opacity = "1";
+    	manhwa3.style.opacity = "1";
+    	manhwa4.style.opacity = "1";
+    	manhwa5.style.opacity = "1";
+    	malpungsun1.style.opacity = "1";
+    	malpungsun2.style.opacity = "1";
+    	malpungsun3.style.opacity = "1";
+    	malpungsun4.style.opacity = "1";
+    	malpungsun5.style.opacity = "1";
+    	manhwa21.style.opacity = "1";
+    	manhwa22.style.opacity = "1";
+    	manhwa23.style.opacity = "1";
+    	manhwa24.style.opacity = "1";
+    	manhwa25.style.opacity = "1";
+    	malpungsun21.style.opacity = "1";
+    	malpungsun22.style.opacity = "1";
+    	malpungsun23.style.opacity = "1";
+    	malpungsun24.style.opacity = "1";
+    	malpungsun25.style.opacity = "1";
+    	malpungsun26.style.opacity = "1";
+    	gyrhkdma1.style.opacity="1";
+    	manhwa31.style.opacity = "0";
+    	manhwa32.style.opacity = "0";
+    	manhwa33.style.opacity = "1";
+    	manhwa34.style.opacity = "0";
+    	manhwa35.style.opacity = "0";
+    	manhwa36.style.opacity = "0";
+    	malpungsun31.style.opacity = "1";
+    	malpungsun32.style.opacity = "1";
+    	gyrhkdma2.style.opacity="0";
+    	gyrhkdma3.style.opacity="1";
+    }else if (t<23150) {
+    	akfvndtjs.style.opacity = "0";
+    	akfvndtjs1.style.opacity = "0";
+    	akfvndtjs2.style.opacity = "0";
+    	akfvndtjs3.style.opacity = "0";
+    	blackbox.style.opacity = "0";
+   	    eotk.style.opacity = "1";
+    	eotk1.style.opacity = "1";
+    	eotk2.style.opacity = "1";
+    	eotk3.style.opacity = "1";
+    	eotk4.style.opacity = "1";
+    	eotk5.style.opacity = "1";
+    	eotk6.style.opacity = "1";
+    	aksghk1.style.opacity = "1";
+    	aksghk2.style.opacity = "1";
+    	aksghk3.style.opacity = "1";
+    	blackbox2.style.opacity = "1";
+    	manhwa1.style.opacity = "1";
+    	manhwa2.style.opacity = "1";
+    	manhwa3.style.opacity = "1";
+    	manhwa4.style.opacity = "1";
+    	manhwa5.style.opacity = "1";
+    	malpungsun1.style.opacity = "1";
+    	malpungsun2.style.opacity = "1";
+    	malpungsun3.style.opacity = "1";
+    	malpungsun4.style.opacity = "1";
+    	malpungsun5.style.opacity = "1";
+    	manhwa21.style.opacity = "1";
+    	manhwa22.style.opacity = "1";
+    	manhwa23.style.opacity = "1";
+    	manhwa24.style.opacity = "1";
+    	manhwa25.style.opacity = "1";
+    	malpungsun21.style.opacity = "1";
+    	malpungsun22.style.opacity = "1";
+    	malpungsun23.style.opacity = "1";
+    	malpungsun24.style.opacity = "1";
+    	malpungsun25.style.opacity = "1";
+    	malpungsun26.style.opacity = "1";
+    	gyrhkdma1.style.opacity="1";
+    	manhwa31.style.opacity = "0";
+    	manhwa32.style.opacity = "0";
+    	manhwa33.style.opacity = "1";
+    	manhwa34.style.opacity = "1";
+    	manhwa35.style.opacity = "0";
+    	manhwa36.style.opacity = "0";
+    	malpungsun31.style.opacity = "1";
+    	malpungsun32.style.opacity = "1";
+    	gyrhkdma2.style.opacity="0";
+    	gyrhkdma3.style.opacity="1";
+    }else if (t<23200) {
+    	akfvndtjs.style.opacity = "0";
+    	akfvndtjs1.style.opacity = "0";
+    	akfvndtjs2.style.opacity = "0";
+    	akfvndtjs3.style.opacity = "0";
+    	blackbox.style.opacity = "0";
+   	    eotk.style.opacity = "1";
+    	eotk1.style.opacity = "1";
+    	eotk2.style.opacity = "1";
+    	eotk3.style.opacity = "1";
+    	eotk4.style.opacity = "1";
+    	eotk5.style.opacity = "1";
+    	eotk6.style.opacity = "1";
+    	aksghk1.style.opacity = "1";
+    	aksghk2.style.opacity = "1";
+    	aksghk3.style.opacity = "1";
+    	blackbox2.style.opacity = "1";
+    	manhwa1.style.opacity = "1";
+    	manhwa2.style.opacity = "1";
+    	manhwa3.style.opacity = "1";
+    	manhwa4.style.opacity = "1";
+    	manhwa5.style.opacity = "1";
+    	malpungsun1.style.opacity = "1";
+    	malpungsun2.style.opacity = "1";
+    	malpungsun3.style.opacity = "1";
+    	malpungsun4.style.opacity = "1";
+    	malpungsun5.style.opacity = "1";
+    	manhwa21.style.opacity = "1";
+    	manhwa22.style.opacity = "1";
+    	manhwa23.style.opacity = "1";
+    	manhwa24.style.opacity = "1";
+    	manhwa25.style.opacity = "1";
+    	malpungsun21.style.opacity = "1";
+    	malpungsun22.style.opacity = "1";
+    	malpungsun23.style.opacity = "1";
+    	malpungsun24.style.opacity = "1";
+    	malpungsun25.style.opacity = "1";
+    	malpungsun26.style.opacity = "1";
+    	gyrhkdma1.style.opacity="1";
+    	manhwa31.style.opacity = "0";
+    	manhwa32.style.opacity = "0";
+    	manhwa33.style.opacity = "1";
+    	manhwa34.style.opacity = "1";
+    	manhwa35.style.opacity = "0";
+    	manhwa36.style.opacity = "0";
+    	malpungsun31.style.opacity = "1";
+    	malpungsun32.style.opacity = "1";
+    	gyrhkdma2.style.opacity="1";
+    	gyrhkdma3.style.opacity="1";
+    	gyrhkdma4.style.opacity="0";
+    }else if (t<24500) {
+    	akfvndtjs.style.opacity = "0";
+    	akfvndtjs1.style.opacity = "0";
+    	akfvndtjs2.style.opacity = "0";
+    	akfvndtjs3.style.opacity = "0";
+    	blackbox.style.opacity = "0";
+   	    eotk.style.opacity = "1";
+    	eotk1.style.opacity = "1";
+    	eotk2.style.opacity = "1";
+    	eotk3.style.opacity = "1";
+    	eotk4.style.opacity = "1";
+    	eotk5.style.opacity = "1";
+    	eotk6.style.opacity = "1";
+    	aksghk1.style.opacity = "1";
+    	aksghk2.style.opacity = "1";
+    	aksghk3.style.opacity = "1";
+    	blackbox2.style.opacity = "1";
+    	manhwa1.style.opacity = "1";
+    	manhwa2.style.opacity = "1";
+    	manhwa3.style.opacity = "1";
+    	manhwa4.style.opacity = "1";
+    	manhwa5.style.opacity = "1";
+    	malpungsun1.style.opacity = "1";
+    	malpungsun2.style.opacity = "1";
+    	malpungsun3.style.opacity = "1";
+    	malpungsun4.style.opacity = "1";
+    	malpungsun5.style.opacity = "1";
+    	manhwa21.style.opacity = "1";
+    	manhwa22.style.opacity = "1";
+    	manhwa23.style.opacity = "1";
+    	manhwa24.style.opacity = "1";
+    	manhwa25.style.opacity = "1";
+    	malpungsun21.style.opacity = "1";
+    	malpungsun22.style.opacity = "1";
+    	malpungsun23.style.opacity = "1";
+    	malpungsun24.style.opacity = "1";
+    	malpungsun25.style.opacity = "1";
+    	malpungsun26.style.opacity = "1";
+    	gyrhkdma1.style.opacity="1";
+    	manhwa31.style.opacity = "0";
+    	manhwa32.style.opacity = "0";
+    	manhwa33.style.opacity = "1";
+    	manhwa34.style.opacity = "1";
+    	manhwa35.style.opacity = "0";
+    	manhwa36.style.opacity = "0";
+    	malpungsun31.style.opacity = "1";
+    	malpungsun32.style.opacity = "1";
+    	gyrhkdma2.style.opacity="1";
+    	gyrhkdma3.style.opacity="1";
+    	gyrhkdma4.style.opacity="0";
+    }else if (t<25000) {
+    	akfvndtjs.style.opacity = "0";
+    	akfvndtjs1.style.opacity = "0";
+    	akfvndtjs2.style.opacity = "0";
+    	akfvndtjs3.style.opacity = "0";
+    	blackbox.style.opacity = "0";
+   	    eotk.style.opacity = "1";
+    	eotk1.style.opacity = "1";
+    	eotk2.style.opacity = "1";
+    	eotk3.style.opacity = "1";
+    	eotk4.style.opacity = "1";
+    	eotk5.style.opacity = "1";
+    	eotk6.style.opacity = "1";
+    	aksghk1.style.opacity = "1";
+    	aksghk2.style.opacity = "1";
+    	aksghk3.style.opacity = "1";
+    	blackbox2.style.opacity = "1";
+    	manhwa1.style.opacity = "1";
+    	manhwa2.style.opacity = "1";
+    	manhwa3.style.opacity = "1";
+    	manhwa4.style.opacity = "1";
+    	manhwa5.style.opacity = "1";
+    	malpungsun1.style.opacity = "1";
+    	malpungsun2.style.opacity = "1";
+    	malpungsun3.style.opacity = "1";
+    	malpungsun4.style.opacity = "1";
+    	malpungsun5.style.opacity = "1";
+    	manhwa21.style.opacity = "1";
+    	manhwa22.style.opacity = "1";
+    	manhwa23.style.opacity = "1";
+    	manhwa24.style.opacity = "1";
+    	manhwa25.style.opacity = "1";
+    	malpungsun21.style.opacity = "1";
+    	malpungsun22.style.opacity = "1";
+    	malpungsun23.style.opacity = "1";
+    	malpungsun24.style.opacity = "1";
+    	malpungsun25.style.opacity = "1";
+    	malpungsun26.style.opacity = "1";
+    	gyrhkdma1.style.opacity="1";
+    	manhwa31.style.opacity = "0";
+    	manhwa32.style.opacity = "0";
+    	manhwa33.style.opacity = "1";
+    	manhwa34.style.opacity = "1";
+    	manhwa35.style.opacity = "1";
+    	manhwa36.style.opacity = "0";
+    	malpungsun31.style.opacity = "1";
+    	malpungsun32.style.opacity = "1";
+    	gyrhkdma2.style.opacity="1";
+    	gyrhkdma3.style.opacity="1";
+    	gyrhkdma4.style.opacity="0";
+    }else if (t<25200) {
+    	akfvndtjs.style.opacity = "0";
+    	akfvndtjs1.style.opacity = "0";
+    	akfvndtjs2.style.opacity = "0";
+    	akfvndtjs3.style.opacity = "0";
+    	blackbox.style.opacity = "0";
+   	    eotk.style.opacity = "1";
+    	eotk1.style.opacity = "1";
+    	eotk2.style.opacity = "1";
+    	eotk3.style.opacity = "1";
+    	eotk4.style.opacity = "1";
+    	eotk5.style.opacity = "1";
+    	eotk6.style.opacity = "1";
+    	aksghk1.style.opacity = "1";
+    	aksghk2.style.opacity = "1";
+    	aksghk3.style.opacity = "1";
+    	blackbox2.style.opacity = "1";
+    	manhwa1.style.opacity = "1";
+    	manhwa2.style.opacity = "1";
+    	manhwa3.style.opacity = "1";
+    	manhwa4.style.opacity = "1";
+    	manhwa5.style.opacity = "1";
+    	malpungsun1.style.opacity = "1";
+    	malpungsun2.style.opacity = "1";
+    	malpungsun3.style.opacity = "1";
+    	malpungsun4.style.opacity = "1";
+    	malpungsun5.style.opacity = "1";
+    	manhwa21.style.opacity = "1";
+    	manhwa22.style.opacity = "1";
+    	manhwa23.style.opacity = "1";
+    	manhwa24.style.opacity = "1";
+    	manhwa25.style.opacity = "1";
+    	malpungsun21.style.opacity = "1";
+    	malpungsun22.style.opacity = "1";
+    	malpungsun23.style.opacity = "1";
+    	malpungsun24.style.opacity = "1";
+    	malpungsun25.style.opacity = "1";
+    	malpungsun26.style.opacity = "1";
+    	gyrhkdma1.style.opacity="1";
+    	manhwa31.style.opacity = "0";
+    	manhwa32.style.opacity = "0";
+    	manhwa33.style.opacity = "1";
+    	manhwa34.style.opacity = "1";
+    	manhwa35.style.opacity = "1";
+    	manhwa36.style.opacity = "1";
+    	malpungsun31.style.opacity = "1";
+    	malpungsun32.style.opacity = "1";
+    	gyrhkdma2.style.opacity="1";
+    	gyrhkdma3.style.opacity="1";
+    	gyrhkdma4.style.opacity="0";
+     }else if (t<26000) {
+    	akfvndtjs.style.opacity = "0";
+    	akfvndtjs1.style.opacity = "0";
+    	akfvndtjs2.style.opacity = "0";
+    	akfvndtjs3.style.opacity = "0";
+    	blackbox.style.opacity = "0";
+   	    eotk.style.opacity = "1";
+    	eotk1.style.opacity = "1";
+    	eotk2.style.opacity = "1";
+    	eotk3.style.opacity = "1";
+    	eotk4.style.opacity = "1";
+    	eotk5.style.opacity = "1";
+    	eotk6.style.opacity = "1";
+    	aksghk1.style.opacity = "1";
+    	aksghk2.style.opacity = "1";
+    	aksghk3.style.opacity = "1";
+    	blackbox2.style.opacity = "1";
+    	manhwa1.style.opacity = "1";
+    	manhwa2.style.opacity = "1";
+    	manhwa3.style.opacity = "1";
+    	manhwa4.style.opacity = "1";
+    	manhwa5.style.opacity = "1";
+    	malpungsun1.style.opacity = "1";
+    	malpungsun2.style.opacity = "1";
+    	malpungsun3.style.opacity = "1";
+    	malpungsun4.style.opacity = "1";
+    	malpungsun5.style.opacity = "1";
+    	manhwa21.style.opacity = "1";
+    	manhwa22.style.opacity = "1";
+    	manhwa23.style.opacity = "1";
+    	manhwa24.style.opacity = "1";
+    	manhwa25.style.opacity = "1";
+    	malpungsun21.style.opacity = "1";
+    	malpungsun22.style.opacity = "1";
+    	malpungsun23.style.opacity = "1";
+    	malpungsun24.style.opacity = "1";
+    	malpungsun25.style.opacity = "1";
+    	malpungsun26.style.opacity = "1";
+    	gyrhkdma1.style.opacity="1";
+    	manhwa31.style.opacity = "0";
+    	manhwa32.style.opacity = "0";
+    	manhwa33.style.opacity = "1";
+    	manhwa34.style.opacity = "1";
+    	manhwa35.style.opacity = "1";
+    	manhwa36.style.opacity = "1";
+    	malpungsun31.style.opacity = "1";
+    	malpungsun32.style.opacity = "1";
+    	gyrhkdma2.style.opacity="1";
+    	gyrhkdma3.style.opacity="1";
+    	gyrhkdma4.style.opacity="0";
+
+     }else if (t<27500) {
+    	akfvndtjs.style.opacity = "0";
+    	akfvndtjs1.style.opacity = "0";
+    	akfvndtjs2.style.opacity = "0";
+    	akfvndtjs3.style.opacity = "0";
+    	blackbox.style.opacity = "0";
+   	    eotk.style.opacity = "1";
+    	eotk1.style.opacity = "1";
+    	eotk2.style.opacity = "1";
+    	eotk3.style.opacity = "1";
+    	eotk4.style.opacity = "1";
+    	eotk5.style.opacity = "1";
+    	eotk6.style.opacity = "1";
+    	aksghk1.style.opacity = "1";
+    	aksghk2.style.opacity = "1";
+    	aksghk3.style.opacity = "1";
+    	blackbox2.style.opacity = "1";
+    	manhwa1.style.opacity = "1";
+    	manhwa2.style.opacity = "1";
+    	manhwa3.style.opacity = "1";
+    	manhwa4.style.opacity = "1";
+    	manhwa5.style.opacity = "1";
+    	malpungsun1.style.opacity = "1";
+    	malpungsun2.style.opacity = "1";
+    	malpungsun3.style.opacity = "1";
+    	malpungsun4.style.opacity = "1";
+    	malpungsun5.style.opacity = "1";
+    	manhwa21.style.opacity = "1";
+    	manhwa22.style.opacity = "1";
+    	manhwa23.style.opacity = "1";
+    	manhwa24.style.opacity = "1";
+    	manhwa25.style.opacity = "1";
+    	malpungsun21.style.opacity = "1";
+    	malpungsun22.style.opacity = "1";
+    	malpungsun23.style.opacity = "1";
+    	malpungsun24.style.opacity = "1";
+    	malpungsun25.style.opacity = "1";
+    	malpungsun26.style.opacity = "1";
+    	gyrhkdma1.style.opacity="1";
+    	manhwa31.style.opacity = "0";
+    	manhwa32.style.opacity = "0";
+    	manhwa33.style.opacity = "1";
+    	manhwa34.style.opacity = "1";
+    	manhwa35.style.opacity = "1";
+    	manhwa36.style.opacity = "1";
+    	malpungsun31.style.opacity = "1";
+    	malpungsun32.style.opacity = "1";
+    	gyrhkdma2.style.opacity="1";
+    	gyrhkdma3.style.opacity="1";
+    	gyrhkdma4.style.opacity="1";
+    
+    
+    
+    
+    
+
+
+
+
+
+
+}
+
+}
+
+
+   
+   
+
+   
+
+
+
+
+
+
+
+</script>
+
+</body>
+</html>
